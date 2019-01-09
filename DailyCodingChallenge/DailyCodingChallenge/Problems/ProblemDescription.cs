@@ -12,6 +12,8 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM006_DESCRIPTION = "An XOR linked list is a more memory efficient doubly linked list.\nInstead of each node holding next and prev fields, it holds a field named both,\nwhich is an XOR of the next node and the previous node. Implement an XOR linked list;\nit has an add(element) which adds the element to the end, and a get(index) which returns the node at index.\nIf using a language that has no pointers(such as Python), you can assume you have access\nto get_pointer and dereference_pointer functions that converts between nodes and memory addresses.";
 		public static string PROBLEM007_DESCRIPTION = "Given the mapping a = 1, b = 2, ... z = 26, and an encoded message,\ncount the number of ways it can be decoded.\nFor example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.\nYou can assume that the messages are decodable.For example, '001' is not allowed.";
 		public static string PROBLEM008_DESCRIPTION = "A unival tree (which stands for 'universal value') is a tree where all nodes under it have the same value.\nGiven the root to a binary tree, count the number of unival subtrees.";
+		public static string PROBLEM009_DESCRIPTION = "Given a list of integers, write a function that returns the largest sum of non-adjacent numbers.\nNumbers can be 0 or negative.\nFor example, [2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5.\n[5, 1, 1, 5] should return 10, since we pick 5 and 5.\nFollow-up: Can you do this in O(N) time and constant space?";
+
 
 	}
 }

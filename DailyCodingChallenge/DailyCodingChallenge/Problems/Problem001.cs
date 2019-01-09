@@ -5,8 +5,13 @@ namespace DailyCodingChallenge.Problems
 {
 	public class Problem001 : Problem
 	{
+		#region Input
+
 		private static int K = 17;
 		private static List<int> NUMBERS = new List<int> { 10, 15, 3, 7 };
+		
+		#endregion
+
 		private List<int> _differences;
 
 		public Problem001() : base(1, ProblemDescription.PROBLEM001_DESCRIPTION)

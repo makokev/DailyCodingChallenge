@@ -11,7 +11,7 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM005_DESCRIPTION = "cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair.\nFor example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.\nImplement car and cdr.";
 		public static string PROBLEM006_DESCRIPTION = "An XOR linked list is a more memory efficient doubly linked list.\nInstead of each node holding next and prev fields, it holds a field named both,\nwhich is an XOR of the next node and the previous node. Implement an XOR linked list;\nit has an add(element) which adds the element to the end, and a get(index) which returns the node at index.\nIf using a language that has no pointers(such as Python), you can assume you have access\nto get_pointer and dereference_pointer functions that converts between nodes and memory addresses.";
 		public static string PROBLEM007_DESCRIPTION = "Given the mapping a = 1, b = 2, ... z = 26, and an encoded message,\ncount the number of ways it can be decoded.\nFor example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.\nYou can assume that the messages are decodable.For example, '001' is not allowed.";
-
+		public static string PROBLEM008_DESCRIPTION = "A unival tree (which stands for 'universal value') is a tree where all nodes under it have the same value.\nGiven the root to a binary tree, count the number of unival subtrees.";
 
 	}
 }

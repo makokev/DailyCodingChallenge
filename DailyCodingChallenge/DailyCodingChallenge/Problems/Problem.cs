@@ -66,7 +66,7 @@ public abstract class Problem
 
 	public override string ToString() => "Problem" + _problemNumber;
 
-	public string PrintDescription => _description;
+	public string PrintDescription() => _description;
 
 	public int ProblemNumber => _problemNumber;
 

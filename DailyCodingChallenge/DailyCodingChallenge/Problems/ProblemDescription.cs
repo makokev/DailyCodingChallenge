@@ -14,5 +14,13 @@ namespace DailyCodingChallenge.Problems
 			"except the one at index i.\n" +
 			"For example, given the array [1, 2, 3, 4, 5] the output will be [120, 60, 40, 30, 24].\n" +
 			"Bonus: what if you can't use division?";
+
+		public static string PROBLEM003_DESCRIPTION = "Given the root to a binary tree, implement serialize(root),\n" +
+			"which serializes the tree into a string, and deserialize(s), which deserializes the string back\n" +
+			"into the tree.\n" +
+			"The following test should pass: node = Node('root', Node('left', Node('left.left')), Node('right'))\n" +
+			"assert deserialize(serialize(node)).left.left.val == 'left.left'";
+
+
 	}
 }

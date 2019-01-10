@@ -15,6 +15,7 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM009_DESCRIPTION = "Given a list of integers, write a function that returns the largest sum of non-adjacent numbers.\nNumbers can be 0 or negative.\nFor example, [2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5.\n[5, 1, 1, 5] should return 10, since we pick 5 and 5.\nFollow-up: Can you do this in O(N) time and constant space?";
 		public static string PROBLEM010_DESCRIPTION = "Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.";
 		public static string PROBLEM011_DESCRIPTION = "Implement an autocomplete system. That is, given a query string s and a set of all possible query strings,\nreturn all strings in the set that have s as a prefix.\nFor example, given the query string de and the set of strings[dog, deer, deal], return [deer, deal].\nHint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.";
+		public static string PROBLEM012_DESCRIPTION = "There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time.\nGiven N, write a function that returns the number of unique ways you can climb the staircase.\nThe order of the steps matters.\nWhat if, instead of being able to climb 1 or 2 steps at a time, you could climb any number\nfrom a set of positive integers X?\nFor example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.";
 
 	}
 }

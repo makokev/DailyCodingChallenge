@@ -14,5 +14,7 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM008_DESCRIPTION = "A unival tree (which stands for 'universal value') is a tree where all nodes under it have the same value.\nGiven the root to a binary tree, count the number of unival subtrees.";
 		public static string PROBLEM009_DESCRIPTION = "Given a list of integers, write a function that returns the largest sum of non-adjacent numbers.\nNumbers can be 0 or negative.\nFor example, [2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5.\n[5, 1, 1, 5] should return 10, since we pick 5 and 5.\nFollow-up: Can you do this in O(N) time and constant space?";
 		public static string PROBLEM010_DESCRIPTION = "Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.";
+		public static string PROBLEM011_DESCRIPTION = "Implement an autocomplete system. That is, given a query string s and a set of all possible query strings,\nreturn all strings in the set that have s as a prefix.\nFor example, given the query string de and the set of strings[dog, deer, deal], return [deer, deal].\nHint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.";
+
 	}
 }

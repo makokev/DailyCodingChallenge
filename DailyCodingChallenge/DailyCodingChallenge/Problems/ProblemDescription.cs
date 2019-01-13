@@ -17,6 +17,7 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM011_DESCRIPTION = "Implement an autocomplete system. That is, given a query string s and a set of all possible query strings,\nreturn all strings in the set that have s as a prefix.\nFor example, given the query string de and the set of strings[dog, deer, deal], return [deer, deal].\nHint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.";
 		public static string PROBLEM012_DESCRIPTION = "There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time.\nGiven N, write a function that returns the number of unique ways you can climb the staircase.\nThe order of the steps matters.\nWhat if, instead of being able to climb 1 or 2 steps at a time, you could climb any number\nfrom a set of positive integers X?\nFor example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.";
 		public static string PROBLEM013_DESCRIPTION = "Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.\nFor example, given s = 'abcba' and k = 2, the longest substring with k distinct characters is 'bcb'.";
+		public static string PROBLEM014_DESCRIPTION = "The area of a circle is defined as pi*r^2. Estimate pi to 3 decimal places (3.141) using a Monte Carlo method.\nHint: The basic equation of a circle is x^2 + y^2 = r^2.";
 
 	}
 }

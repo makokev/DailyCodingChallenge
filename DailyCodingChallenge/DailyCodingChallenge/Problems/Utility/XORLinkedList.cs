@@ -46,7 +46,7 @@ namespace DailyCodingChallenge.Problems.Utility
 		public ValueType Get(int index)
 		{
 			if (index >= Count)
-				new ArgumentOutOfRangeException("Index out of bound exception.");
+				throw new ArgumentOutOfRangeException("Index out of bound exception.");
 
 			XORNode currentNode = memory[_first];
 			XORNode previewsNode = memory[0];
@@ -65,7 +65,7 @@ namespace DailyCodingChallenge.Problems.Utility
 			XORNode currentNode, previousNode, nextNode;
 			int address;
 			if (index >= Count)
-				new ArgumentOutOfRangeException("Index out of bound exception.");
+				throw new ArgumentOutOfRangeException("Index out of bound exception.");
 
 			currentNode = memory[_first];
 			previousNode = memory[0];

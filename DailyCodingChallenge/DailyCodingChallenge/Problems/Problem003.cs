@@ -38,12 +38,12 @@ namespace DailyCodingChallenge.Problems
 			if (null == node)
 				return "null pointer";
 			StringBuilder sb = new StringBuilder();
-			sb.Append("Node('").Append(node.val).Append("'");
-			if (null != node.left)
+			sb.Append("Node('").Append(node.Val).Append("'");
+			if (null != node.Left)
 			{
-				sb.Append(", ").Append(Serialize(node.left));
-				if (null != node.right)
-					sb.Append(", ").Append(Serialize(node.right));
+				sb.Append(", ").Append(Serialize(node.Left));
+				if (null != node.Right)
+					sb.Append(", ").Append(Serialize(node.Right));
 			}
 			sb.Append(")");
 			return sb.ToString();

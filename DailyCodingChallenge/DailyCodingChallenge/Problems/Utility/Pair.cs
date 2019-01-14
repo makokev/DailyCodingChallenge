@@ -11,31 +11,31 @@ namespace DailyCodingChallenge.Problems.Utility
 
 		public Pair(T a, W b)
 		{
-			this.a = a;
-			this.b = b;
+			this.A = a;
+			this.B = b;
 		}
 
-		public T a { get; }
-		public W b { get; }
+		public T A { get; }
+		public W B { get; }
 
 		public override string ToString()
 		{
-			return "(" + a + ", " + b + ")";
+			return "(" + A + ", " + B + ")";
 		}
 
-		public static Pair<T, W> cons(T a, W b)
+		public static Pair<T, W> Cons(T a, W b)
 		{
 			return new Pair<T, W>(a, b);
 		}
 
-		public static T car(Pair<T, W> pair)
+		public static T Car(Pair<T, W> pair)
 		{
-			return pair.a;
+			return pair.A;
 		}
 
-		public static W cdr(Pair<T, W> pair)
+		public static W Cdr(Pair<T, W> pair)
 		{
-			return pair.b;
+			return pair.B;
 		}
 	}
 }

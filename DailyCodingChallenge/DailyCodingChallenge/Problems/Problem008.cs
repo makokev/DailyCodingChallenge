@@ -24,12 +24,12 @@ namespace DailyCodingChallenge.Problems
 			if (0 == childrenCount)
 				return true;
 			if (1 == childrenCount)
-				return (IsUniversalTree(root.left) && root.val.Equals(root.left.val));
+				return (IsUniversalTree(root.Left) && root.Val.Equals(root.Left.Val));
 			else
-				return (IsUniversalTree(root.left) && 
-					IsUniversalTree(root.right) && 
-					root.val.Equals(root.left.val) && 
-					root.val.Equals(root.right.val));
+				return (IsUniversalTree(root.Left) && 
+					IsUniversalTree(root.Right) && 
+					root.Val.Equals(root.Left.Val) && 
+					root.Val.Equals(root.Right.Val));
 		}
 
 		private int CountUniversalSubtree(Node<int> root) {
@@ -37,12 +37,12 @@ namespace DailyCodingChallenge.Problems
 
 			if (1 == root.ChildrenCount())
 			{
-				count = CountUniversalSubtree(root.left);
+				count = CountUniversalSubtree(root.Left);
 			}
 			else if(2 == root.ChildrenCount())
 			{
-				count  = CountUniversalSubtree(root.left);
-				count += CountUniversalSubtree(root.right);
+				count  = CountUniversalSubtree(root.Left);
+				count += CountUniversalSubtree(root.Right);
 			}
 
 			if (IsUniversalTree(root))

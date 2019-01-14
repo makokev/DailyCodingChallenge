@@ -12,9 +12,9 @@ namespace DailyCodingChallenge.Problems.Utility
 		private Node<ValueType> _leftChild = null;
 		private Node<ValueType> _rightChild = null;
 
-		public Node<ValueType> left => _leftChild;
-		public Node<ValueType> right => _rightChild;
-		public ValueType val => _value;
+		public Node<ValueType> Left => _leftChild;
+		public Node<ValueType> Right => _rightChild;
+		public ValueType Val => _value;
 
 		public Node(ValueType value)
 		{
@@ -34,9 +34,9 @@ namespace DailyCodingChallenge.Problems.Utility
 		public int ChildrenCount()
 		{
 			int count = 0;
-			if (null != left)
+			if (null != Left)
 				count++;
-			if (null != right)
+			if (null != Right)
 				count++;
 			return count;
 		}
@@ -47,15 +47,15 @@ namespace DailyCodingChallenge.Problems.Utility
 
 		public void PrintTree(String indent, bool last)
 		{
-			Console.WriteLine(indent + "+- " + val);
+			Console.WriteLine(indent + "+- " + Val);
 			indent += last ? "   " : "|  ";
 
 			if(1 == ChildrenCount())
-				left.PrintTree(indent, true);
+				Left.PrintTree(indent, true);
 			else if(2 == ChildrenCount())
 			{
-				left.PrintTree(indent, false);
-				right.PrintTree(indent, true);
+				Left.PrintTree(indent, false);
+				Right.PrintTree(indent, true);
 			}
 		}
 	}

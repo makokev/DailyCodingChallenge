@@ -75,6 +75,11 @@ namespace DailyCodingChallenge.Problems.Utility
 		private string _word;
 		private readonly Dictionary<char, AutocompleteNode> _children;
 
+		public Dictionary<char, AutocompleteNode> Children => _children;
+		public string Word => _word;
+		public char Letter => _letter;
+		public bool IsLeaf => _letter == '\0';
+
 		public AutocompleteNode(char letter, string word)
 		{
 			_letter = letter;
@@ -82,9 +87,6 @@ namespace DailyCodingChallenge.Problems.Utility
 			_children = new Dictionary<char, AutocompleteNode>();
 		}
 
-		public Dictionary<char, AutocompleteNode> Children => _children;
-		public string Word => _word;
-		public char Letter => _letter;
-		public bool IsLeaf => _letter == '\0';
+		
 	}
 }

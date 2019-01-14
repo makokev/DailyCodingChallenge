@@ -16,7 +16,7 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("Input: Pair = " + pair.ToString());
 			Console.WriteLine("Trying car(cons(3,4)) = 3 ...");
 			Console.Write("Result: ");
-			if (Pair<int,int>.car(Pair<int, int>.cons(3, 4)) == 3)
+			if (Pair<int,int>.Car(Pair<int, int>.Cons(3, 4)) == 3)
 				Console.WriteLine("Success!");
 			else
 				Console.WriteLine("Wrong!");

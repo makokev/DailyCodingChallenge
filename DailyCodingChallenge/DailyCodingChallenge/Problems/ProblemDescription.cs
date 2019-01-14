@@ -19,6 +19,7 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM013_DESCRIPTION = "Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.\nFor example, given s = 'abcba' and k = 2, the longest substring with k distinct characters is 'bcb'.";
 		public static string PROBLEM014_DESCRIPTION = "The area of a circle is defined as pi*r^2. Estimate pi to 3 decimal places (3.141) using a Monte Carlo method.\nHint: The basic equation of a circle is x^2 + y^2 = r^2.";
 		public static string PROBLEM015_DESCRIPTION = "Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.";
-
+		public static string PROBLEM016_DESCRIPTION = "You run an e-commerce website and want to record the last N order ids in a log.\nImplement a data structure to accomplish this, with the following API:\n- Record(order_id) : adds the order_id to the log\n- GetLast(i) : gets the ith last element from the log.(i <= N guaranteed).\n\nYou should be as efficient with time and space as possible.";
+		
 	}
 }

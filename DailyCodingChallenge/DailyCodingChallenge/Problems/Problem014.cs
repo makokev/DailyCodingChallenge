@@ -7,11 +7,8 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem014() : base(14, ProblemDescription.PROBLEM014_DESCRIPTION){ }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
-
 			double pi_value = Math.Truncate(Math.PI * 1000) / 1000;
 			Console.WriteLine("Truncate PI value = " + pi_value);
 

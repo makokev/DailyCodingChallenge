@@ -13,7 +13,7 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem002() : base(2, ProblemDescription.PROBLEM002_DESCRIPTION) { }
 
-		override public void run()
+		protected override void Run()
 		{
 			int optionNumber;
 			Console.WriteLine(this.ToString());

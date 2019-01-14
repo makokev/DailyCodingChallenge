@@ -8,10 +8,8 @@ namespace DailyCodingChallenge.Problems
 	{	
 		public Problem005() : base(5, ProblemDescription.PROBLEM005_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			Pair<int, int> pair = new Pair<int, int>(3, 4);
 			Console.WriteLine("Input: Pair = " + pair.ToString());
 			Console.WriteLine("Trying car(cons(3,4)) = 3 ...");

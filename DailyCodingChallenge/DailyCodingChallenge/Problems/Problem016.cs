@@ -11,11 +11,8 @@ namespace DailyCodingChallenge.Problems
 	{
 		public Problem016() : base(16, ProblemDescription.PROBLEM016_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(ToString());
-			Console.WriteLine(PrintDescription() + "\n");
-
 			IdLogger logger = new IdLogger(3);
 			logger.Record("A");
 			logger.Record("B");

@@ -7,10 +7,8 @@ namespace DailyCodingChallenge.Problems
 	{
 		public Problem008() : base(8, ProblemDescription.PROBLEM008_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			Node<int> root = new Node<int>(0, new Node<int>(1), new Node<int>(0, new Node<int>(1, new Node<int>(1), new Node<int>(1)), new Node<int>(0)));
 			root.PrintTree();
 			Console.Write("Result: ");

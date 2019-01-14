@@ -42,7 +42,7 @@ namespace DailyCodingChallenge
 
 					// If the problem exists, run the implementation
 					if (null != p)
-						p.run();
+						p.Start();
 					else
 						Console.WriteLine("Problem " + problemNumber + " doesn't exist.");
 					Console.WriteLine("\nEnd Problem.\n");

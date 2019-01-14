@@ -14,11 +14,8 @@ namespace DailyCodingChallenge.Problems
 
 		private double ConvertToPercentage(double value) => Math.Truncate(value * 10000) / 100;
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
-
 			Random r = new Random();
 
 			string chosen_string = "";

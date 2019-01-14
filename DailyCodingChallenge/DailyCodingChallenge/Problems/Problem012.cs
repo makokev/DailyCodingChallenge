@@ -12,10 +12,8 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem012() : base(12, ProblemDescription.PROBLEM012_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			Console.Write("Insert the starcase length: ");
 			if (!int.TryParse(Console.ReadLine(), out int staircaseLength))
 			{

@@ -27,10 +27,8 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem011() : base(11, ProblemDescription.PROBLEM011_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			AutocompleteSystem autocompleteSystem = new AutocompleteSystem();
 			WORDS.ForEach(autocompleteSystem.Add);
 

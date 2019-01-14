@@ -35,7 +35,6 @@ public abstract class Problem
 		Problem problem = null;
 		if (_problems.ContainsKey(problemNumber))
 			problem = (Problem)Activator.CreateInstance(_problems[problemNumber]);
-
 		return problem;
 	}
 
@@ -64,6 +63,13 @@ public abstract class Problem
 
 	#region Public methods and Properties
 
+	public void Start()
+	{
+		Console.WriteLine(ToString());
+		Console.WriteLine(PrintDescription() + "\n");
+		Run();
+	}
+
 	public override string ToString() => "Problem" + _problemNumber;
 
 	public string PrintDescription() => _description;
@@ -74,7 +80,7 @@ public abstract class Problem
 
 	#region Abstract method
 
-	public abstract void run();
+	protected abstract void Run();
 
 	#endregion
 }

@@ -15,11 +15,8 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem004() : base(4, ProblemDescription.PROBLEM004_DESCRIPTION){ }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
-
 			List<int> list = values.ToList();
 			Console.Write("Input: [");
 			for (int i = 0; i < list.Count; i++)

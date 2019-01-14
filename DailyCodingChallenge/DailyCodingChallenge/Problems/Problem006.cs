@@ -12,10 +12,8 @@ namespace DailyCodingChallenge.Problems
 	{
 		public Problem006() : base(6, ProblemDescription.PROBLEM006_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			XORLinkedList<int> list = new XORLinkedList<int>();
 			list.Add(1);
 			list.Add(2);

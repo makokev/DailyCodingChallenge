@@ -19,11 +19,8 @@ namespace DailyCodingChallenge.Problems
 			_differences = new List<int>();
 		}
 
-		override public void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
-
 			bool founded = false;
 			int firstNumber = 0, diff = 0;
 			foreach (int number in NUMBERS) //one pass

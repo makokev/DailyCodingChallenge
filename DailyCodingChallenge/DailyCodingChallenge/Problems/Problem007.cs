@@ -29,11 +29,8 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem007() : base(7, ProblemDescription.PROBLEM007_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
-
 			Console.WriteLine("Input: '" + numericString + "'.");
 
 			int numberOfTranslations = Translate(numericString);

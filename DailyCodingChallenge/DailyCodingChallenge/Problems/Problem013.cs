@@ -10,10 +10,8 @@ namespace DailyCodingChallenge.Problems
 	{
 		public Problem013() : base(13, ProblemDescription.PROBLEM013_DESCRIPTION) {	}
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			Console.Write("Insert the number of different characters: ");
 			if (!int.TryParse(Console.ReadLine(), out int charNumber))
 			{

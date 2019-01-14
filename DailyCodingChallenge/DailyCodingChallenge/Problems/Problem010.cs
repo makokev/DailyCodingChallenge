@@ -11,10 +11,8 @@ namespace DailyCodingChallenge.Problems
 	{
 		public Problem010() : base(10, ProblemDescription.PROBLEM010_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			JobScheduler jobScheduler = new JobScheduler(5000, MyJob);
 			Console.WriteLine("JobScheduler prepared.");
 			jobScheduler.Start();

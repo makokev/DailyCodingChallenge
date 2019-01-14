@@ -12,11 +12,8 @@ namespace DailyCodingChallenge.Problems
 
 		public Problem003() : base(3, ProblemDescription.PROBLEM003_DESCRIPTION) { }
 
-		public override void run()
+		protected override void Run()
 		{
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
-
 			//Node root = new Node("root");
 			//Node root = new Node("root", new Node("left"));
 			Node<string> root = new Node<string>("root", new Node<string>("left", new Node<string>("left.left")), new Node<string>("right"));

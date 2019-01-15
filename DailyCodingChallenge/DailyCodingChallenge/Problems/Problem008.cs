@@ -9,28 +9,28 @@ namespace DailyCodingChallenge.Problems
 
 		protected override void Run()
 		{
-			Node<int> root = new Node<int>(0, new Node<int>(1), new Node<int>(0, new Node<int>(1, new Node<int>(1), new Node<int>(1)), new Node<int>(0)));
+			BinaryNode<int> root = new BinaryNode<int>(0, new BinaryNode<int>(1), new BinaryNode<int>(0, new BinaryNode<int>(1, new BinaryNode<int>(1), new BinaryNode<int>(1)), new BinaryNode<int>(0)));
 			root.PrintTree();
 			Console.Write("Result: ");
 			Console.WriteLine("Number of Universal Subtree = " + CountUniversalSubtree(root));
 			
 		}
 
-		private bool IsUniversalTree(Node<int> root)
+		private bool IsUniversalTree(BinaryNode<int> root)
 		{
 			int childrenCount = root.ChildrenCount();
 			if (0 == childrenCount)
 				return true;
 			if (1 == childrenCount)
-				return (IsUniversalTree(root.Left) && root.Val.Equals(root.Left.Val));
+				return (IsUniversalTree(root.Left) && root.Value.Equals(root.Left.Value));
 			else
 				return (IsUniversalTree(root.Left) && 
 					IsUniversalTree(root.Right) && 
-					root.Val.Equals(root.Left.Val) && 
-					root.Val.Equals(root.Right.Val));
+					root.Value.Equals(root.Left.Value) && 
+					root.Value.Equals(root.Right.Value));
 		}
 
-		private int CountUniversalSubtree(Node<int> root) {
+		private int CountUniversalSubtree(BinaryNode<int> root) {
 			int count = 0;
 
 			if (1 == root.ChildrenCount())

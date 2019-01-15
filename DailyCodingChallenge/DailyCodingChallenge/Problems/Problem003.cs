@@ -16,11 +16,11 @@ namespace DailyCodingChallenge.Problems
 		{
 			//Node root = new Node("root");
 			//Node root = new Node("root", new Node("left"));
-			Node<string> root = new Node<string>("root", new Node<string>("left", new Node<string>("left.left")), new Node<string>("right"));
+			BinaryNode<string> root = new BinaryNode<string>("root", new BinaryNode<string>("left", new BinaryNode<string>("left.left")), new BinaryNode<string>("right"));
 			string serializedNode = Serialize(root);
 			Console.WriteLine("Serialized Node:\n" + serializedNode);
 			Console.WriteLine("Deserializing Node...");
-			Node<string> deserializedNode = Deserialize(serializedNode);
+			BinaryNode<string> deserializedNode = Deserialize(serializedNode);
 			Console.WriteLine("Serializing Deserialized Node:");
 			Console.WriteLine(Serialize(deserializedNode));
 
@@ -30,12 +30,12 @@ namespace DailyCodingChallenge.Problems
 				Console.WriteLine("Wrong");
 		}
 
-		public string Serialize(Node<string> node)
+		public string Serialize(BinaryNode<string> node)
 		{
 			if (null == node)
 				return "null pointer";
 			StringBuilder sb = new StringBuilder();
-			sb.Append("Node('").Append(node.Val).Append("'");
+			sb.Append("Node('").Append(node.Value).Append("'");
 			if (null != node.Left)
 			{
 				sb.Append(", ").Append(Serialize(node.Left));
@@ -46,9 +46,9 @@ namespace DailyCodingChallenge.Problems
 			return sb.ToString();
 		}
 		
-		public Node<string> Deserialize(string serializedNode)
+		public BinaryNode<string> Deserialize(string serializedNode)
 		{
-			Node<string> leftNode = null, rightNode = null;
+			BinaryNode<string> leftNode = null, rightNode = null;
 			
 			// Trimming the string
 			serializedNode = serializedNode.Substring(serializedNode.IndexOf('(') + 1);
@@ -95,7 +95,7 @@ namespace DailyCodingChallenge.Problems
 				leftNode = Deserialize(leftString);
 			}
 
-			return new Node<string>(val, leftNode, rightNode);
+			return new BinaryNode<string>(val, leftNode, rightNode);
 		}
 	}
 }

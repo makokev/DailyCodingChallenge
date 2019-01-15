@@ -1,62 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DailyCodingChallenge.Problems.Utility
 {
 	class Node<ValueType>
 	{
-		private ValueType _value;
-		private Node<ValueType> _leftChild = null;
-		private Node<ValueType> _rightChild = null;
+		protected readonly List<Node<ValueType>> _children = new List<Node<ValueType>>();
+		public ValueType Value { get; protected set; }
 
-		public Node<ValueType> Left => _leftChild;
-		public Node<ValueType> Right => _rightChild;
-		public ValueType Val => _value;
+		/// <summary>
+		/// Gives a copy of the children nodes. Updates at this copy doesn't affect the original one.<para/>
+		/// To update children use: AddChild(child) / RemoveChild(child) / RemoveChildAt(index).
+		/// </summary>
+		public List<Node<ValueType>> Children => _children.ToList();
+		public Node<ValueType> ParentNode { get; protected set; }
+		public int ChildrenCount => Children.Count;
+		public bool IsLeaf => ChildrenCount == 0;
 
-		public Node(ValueType value)
+		public Node(ValueType value, Node<ValueType> parent = null)
 		{
-			_value = value;
+			Value = value;
+			ParentNode = parent;
+		}
+		
+		public void AddChild(Node<ValueType> child)
+		{
+			child.ParentNode = this;
+			_children.Add(child);
 		}
 
-		public Node(ValueType value, Node<ValueType> leftChild) : this(value)
+		public void RemoveChild(Node<ValueType> child)
 		{
-			_leftChild = leftChild;
+			if (_children.Contains(child))
+			{
+				_children.Remove(child);
+				child.ParentNode = null;
+			}
 		}
 
-		public Node(ValueType value, Node<ValueType> leftChild, Node<ValueType> rightChild) : this(value, leftChild)
-		{
-			_rightChild = rightChild;
-		}
+		public void RemoveChildAt(int index) => _children.RemoveAt(index);
 
-		public int ChildrenCount()
+		public void PrintTree()
 		{
-			int count = 0;
-			if (null != Left)
-				count++;
-			if (null != Right)
-				count++;
-			return count;
-		}
-
-		public void PrintTree() {
-			this.PrintTree("", true);
+			PrintTree("", true);
 		}
 
 		public void PrintTree(String indent, bool last)
 		{
-			Console.WriteLine(indent + "+- " + Val);
+			Console.WriteLine(indent + "+- " + Value);
 			indent += last ? "   " : "|  ";
 
-			if(1 == ChildrenCount())
-				Left.PrintTree(indent, true);
-			else if(2 == ChildrenCount())
-			{
-				Left.PrintTree(indent, false);
-				Right.PrintTree(indent, true);
-			}
+			for (int i = 0; i < ChildrenCount - 1; i++)
+				_children[i].PrintTree(indent, false);
+			if(ChildrenCount > 0)
+				_children[ChildrenCount-1].PrintTree(indent, true);
+			
 		}
 	}
 }

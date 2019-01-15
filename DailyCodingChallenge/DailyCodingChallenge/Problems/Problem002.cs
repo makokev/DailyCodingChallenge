@@ -49,7 +49,7 @@ namespace DailyCodingChallenge.Problems
 			for (int i = 0; i < NUMBERS.Count; i++)
 			{
 				if (0 == i)
-					Console.Write("[" + NUMBERS[i]);
+					Console.Write("[" + product / NUMBERS[i]);
 				else
 					Console.Write(", " + product / NUMBERS[i]);
 			}

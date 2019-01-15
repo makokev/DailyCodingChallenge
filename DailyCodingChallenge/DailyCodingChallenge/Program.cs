@@ -16,8 +16,14 @@ namespace DailyCodingChallenge
 				Console.WriteLine("List of problems:");
 
 				// Printing problem's names
-				foreach(Type t in Problem.GetProblemTypes())
-					Console.WriteLine(t.ToString().Split('.')[2]);
+				List<Type> types = Problem.GetProblemTypes();
+				int count = types.Count;
+				for (int i = 1; i <= count; i++)
+				{
+					Console.Write(types[i-1].ToString().Split('.')[2]+"\t");
+					if (i % 5 == 0)
+						Console.WriteLine();
+				}
 
 				Console.WriteLine();
 
@@ -44,9 +50,7 @@ namespace DailyCodingChallenge
 					if (null != p)
 						p.Start();
 					else
-						Console.WriteLine("Problem " + problemNumber + " doesn't exist.");
-					Console.WriteLine("\nEnd Problem.\n");
-					Console.WriteLine("------------------------------------------------------------");
+						Console.WriteLine("Problem " + problemNumber + " doesn't exist.\n");
 				}
 				else
 				{

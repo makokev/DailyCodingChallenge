@@ -65,9 +65,11 @@ public abstract class Problem
 
 	public void Start()
 	{
-		Console.WriteLine(ToString());
+		Console.WriteLine("--------------------------------------------  " + ToString() + "  --------------------------------------------");
 		Console.WriteLine(PrintDescription() + "\n");
 		Run();
+		Console.WriteLine("\nEnd Problem.\n");
+		Console.WriteLine("----------------------------------------------------------------------------------------------------");
 	}
 
 	public override string ToString() => "Problem" + _problemNumber;

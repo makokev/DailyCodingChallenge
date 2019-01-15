@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyCodingChallenge.Problems.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,16 +21,7 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			List<int> list = numbers.ToList();
-			Console.Write("Input: [");
-			for (int i = 0; i < list.Count; i++)
-			{
-				if (0 == i)
-					Console.Write(list[i]);
-				else
-					Console.Write(", " + list[i]);
-			}
-			Console.WriteLine("]");
-
+			Console.WriteLine("Input: " + list.AsString());
 			Console.WriteLine("Result: Largest sum = " + LargestSum(numbers));
 		}
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyCodingChallenge.Problems.Utility;
+using System;
 using System.Collections.Generic;
 
 namespace DailyCodingChallenge.Problems
@@ -39,21 +40,13 @@ namespace DailyCodingChallenge.Problems
 		}
 
 		// No constraint, division operator used: complexity O(n)
-		private void Algorithm1() {
+		private void Algorithm1()
+		{
 			int product = 1;
 			foreach (int number in NUMBERS)
 				product *= number;
 
-			Console.Write("Result: ");
-
-			for (int i = 0; i < NUMBERS.Count; i++)
-			{
-				if (0 == i)
-					Console.Write("[" + product / NUMBERS[i]);
-				else
-					Console.Write(", " + product / NUMBERS[i]);
-			}
-			Console.WriteLine("]");
+			Console.Write("Result: " + NUMBERS.AsString());
 		}
 
 		// No division operator used: complexity O(n*n)
@@ -72,16 +65,7 @@ namespace DailyCodingChallenge.Problems
 				}
 			}
 
-			Console.Write("Result: ");
-
-			for (int i = 0; i < NUMBERS.Count; i++)
-			{
-				if (0 == i)
-					Console.Write("[" + products[i]);
-				else
-					Console.Write(", " + products[i]);
-			}
-			Console.WriteLine("]");
+			Console.Write("Result: " + NUMBERS.AsString());
 		}
 	}
 }

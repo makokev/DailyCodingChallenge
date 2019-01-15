@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DailyCodingChallenge.Problems.Utility;
 
 namespace DailyCodingChallenge.Problems
 {
@@ -12,9 +11,9 @@ namespace DailyCodingChallenge.Problems
 
 		protected override void Run()
 		{
-			Console.WriteLine("Insert values");
-			List<int> inputList = ReadInputIntList();
-			Console.WriteLine("Inserted list: " + ListAsString(inputList));
+			Console.WriteLine("Insert input values:");
+			List<int> inputList = ReadInputIntList(-1);
+			Console.WriteLine("Inserted list: " + inputList.AsString());
 
 			Console.Write("Insert the window size: ");
 			if (!int.TryParse(Console.ReadLine(), out int windowSize))
@@ -23,9 +22,9 @@ namespace DailyCodingChallenge.Problems
 				return;
 			}
 
-			if (windowSize > inputList.Count)
+			if (windowSize > inputList.Count || windowSize <= 0)
 			{
-				Console.WriteLine("Input Error: windowSize must be smaller or equal to inputSize.");
+				Console.WriteLine("Input Error: windowSize must be smaller or equal to inputSize and greather than 0.");
 				return;
 			}
 
@@ -33,39 +32,25 @@ namespace DailyCodingChallenge.Problems
 			List<int> window = new List<int>();
 			for (int i = 0; i < windowSize; i++)
 				window.Add(inputList[i]);
-			Console.WriteLine("Windows = " + ListAsString(window) + " -> Max = " + window.Max());
+			Console.WriteLine("Windows = " + window.AsString() + " -> Max = " + window.Max());
 			for (int i = windowSize; i < inputList.Count; i++)
 			{
 				window.RemoveAt(0);
 				window.Add(inputList[i]);
-				Console.WriteLine("Windows = " + ListAsString(window) + " -> Max = " + window.Max());
+				Console.WriteLine("Windows = " + window.AsString() + " -> Max = " + window.Max());
 			}
 
 		}
 
-		private string ListAsString(List<int> list)
-		{
-			StringBuilder sb = new StringBuilder();
-			for (int i = 0; i < list.Count; i++)
-			{
-				if (0 == i)
-					sb.Append("[" + list[i]);
-				else
-					sb.Append(", " + list[i]);
-			}
-			sb.Append("]");
-			return sb.ToString();
-		}
-
-		private List<int> ReadInputIntList()
+		private List<int> ReadInputIntList(int exitValue = 0)
 		{
 			List<int> list = new List<int>();
 			while (true)
 			{
-				Console.Write("Insert an integer value (to exit 0): ");
+				Console.Write("Insert an integer value (to exit: "+exitValue+"): ");
 				if (int.TryParse(Console.ReadLine(), out int value))
 				{
-					if (value != 0)
+					if (value != exitValue)
 						list.Add(value);
 					else
 						break;

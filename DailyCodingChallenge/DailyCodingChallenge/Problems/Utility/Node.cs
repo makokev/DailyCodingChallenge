@@ -58,5 +58,10 @@ namespace DailyCodingChallenge.Problems.Utility
 				_children[ChildrenCount-1].PrintTree(indent, true);
 			
 		}
+
+		public override string ToString()
+		{
+			return "Node("+Value+")";
+		}
 	}
 }

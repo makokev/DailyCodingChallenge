@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyCodingChallenge.Problems.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,16 +33,7 @@ namespace DailyCodingChallenge.Problems
 						break;
 				}
 			}
-			Console.Write("\nInserted steps: ");
-			for (int i = 0; i < STEPS.Count; i++)
-			{
-				if (0 == i)
-					Console.Write("[" + STEPS[i]);
-				else
-					Console.Write(", " + STEPS[i]);
-			}
-			Console.WriteLine("]");
-
+			Console.Write("\nInserted steps: " + STEPS.AsString());
 			Console.WriteLine("\nNumber of unique ways: " + CountStep(staircaseLength));
 		}
 

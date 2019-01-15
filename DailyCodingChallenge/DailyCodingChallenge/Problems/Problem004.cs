@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyCodingChallenge.Problems.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,16 +19,8 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			List<int> list = values.ToList();
-			Console.Write("Input: [");
-			for (int i = 0; i < list.Count; i++)
-			{
-				if (0 == i)
-					Console.Write(list[i]);
-				else
-					Console.Write(", " + list[i]);
-			}
-			Console.WriteLine("]");
-
+			Console.Write("Input: " + list.AsString());
+			
 			int minMissing = (list.Count > 0) ? 1 : int.MinValue;
 
 			while (list.Count > 0)
@@ -44,7 +37,6 @@ namespace DailyCodingChallenge.Problems
 				Console.WriteLine("Minimum missing integer value: " + minMissing);
 			else
 				Console.WriteLine("The list is empty.");
-
 		}
 	}
 }

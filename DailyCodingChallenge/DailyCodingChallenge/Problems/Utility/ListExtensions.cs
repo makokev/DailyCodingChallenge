@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DailyCodingChallenge.Problems.Utility
 {
-	public static class ListExtension
+	public static class ListExtensions
 	{
 		public static string AsString<T>(this List<T> list)
 		{

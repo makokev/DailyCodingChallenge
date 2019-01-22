@@ -24,7 +24,7 @@ namespace DailyCodingChallenge.Problems
 		public static string PROBLEM018_DESCRIPTION = "Given an array of integers and a number k, where 1 <= k <= length of the array,\ncompute the maximum values of each subarray of length k.\nFor example, given array = [10, 5, 2, 7, 8, 7] and k = 3, we should get: [10, 7, 8, 8].\nDo this in O(n) time and O(k) space. You can modify the input array in-place and you do not need\nto store the results. You can simply print them out as you compute them.";
 		public static string PROBLEM019_DESCRIPTION = "A builder is looking to build a row of N houses that can be of K different colors.\nHe has a goal of minimizing cost while ensuring that no two neighboring houses are of the same color.\nGiven an N by K matrix where the n_th row and k_th column represents the cost to build the n_th house\nwith k_th color, return the minimum cost which achieves this goal.";
 		public static string PROBLEM020_DESCRIPTION = "Given two singly linked lists that intersect at some point, find the intersecting node. The lists are non-cyclical.\nFor example, given A = 3 -> 7 -> 8 -> 10 and B = 99-> 1 -> 8 -> 10, return the node with value 8.\nIn this example, assume nodes with the same value are the exact same node objects.\nDo this in O(M + N) time (where M and N are the lengths of the lists) and constant space.";
-
+		public static string PROBLEM021_DESCRIPTION = "Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required.\nFor example, given[(30, 75), (0, 50), (60, 150)], you should return 2.";
 
 	}
 }

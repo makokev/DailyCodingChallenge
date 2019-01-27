@@ -11,7 +11,7 @@ namespace DailyCodingChallenge.Problems.Utility
 		private BinaryNode<ValueType> _leftChild;
 		private BinaryNode<ValueType> _rightChild;
 
-		public BinaryNode<ValueType> Left => _leftChild;
+		public virtual BinaryNode<ValueType> Left { get { return _leftChild; } protected set { _leftChild = value; } }
 		public BinaryNode<ValueType> Right => _rightChild;
 		public ValueType Value { get; private set; }
 

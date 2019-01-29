@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyCodingChallenge.Problems.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -66,7 +67,7 @@ public abstract class Problem
 	public void Start()
 	{
 		Console.WriteLine("--------------------------------------------  " + ToString() + "  --------------------------------------------");
-		Console.WriteLine(PrintDescription() + "\n");
+		Console.WriteLine(Description.Giustify(100) + "\n");
 		Run();
 		Console.WriteLine("\nEnd Problem.\n");
 		Console.WriteLine("----------------------------------------------------------------------------------------------------");
@@ -74,7 +75,7 @@ public abstract class Problem
 
 	public override string ToString() => "Problem" + _problemNumber;
 
-	public string PrintDescription() => _description;
+	public string Description => _description;
 
 	public int ProblemNumber => _problemNumber;
 

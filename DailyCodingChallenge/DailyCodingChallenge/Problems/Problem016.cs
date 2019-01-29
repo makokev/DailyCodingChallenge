@@ -23,8 +23,6 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("Logger[1] = " + logger.GetLast(2));
 			Console.WriteLine("Logger[2] = " + logger.GetLast(3));
 			Console.WriteLine("Logger[3] = " + logger.GetLast(4));
-			Console.WriteLine("Logger[-1] = " + logger.GetLast(0));
-
 		}
 	}
 }

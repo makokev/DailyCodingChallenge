@@ -42,6 +42,8 @@ namespace DailyCodingChallenge.Problems.Utility
 
 		public void RemoveChildAt(int index) => _children.RemoveAt(index);
 
+		public Node<ValueType> GetChildrenAt(int index) => _children[index];
+
 		public void PrintTree()
 		{
 			PrintTree("", true);

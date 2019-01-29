@@ -17,8 +17,6 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			int optionNumber;
-			Console.WriteLine(this.ToString());
-			Console.WriteLine(this.PrintDescription() + "\n");
 			Console.WriteLine("Resolving options:");
 			Console.WriteLine("1) No constraint.");
 			Console.WriteLine("2) Resolve without using division operator.");

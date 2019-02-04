@@ -1,4 +1,5 @@
 ﻿using DailyCodingChallenge.Problems.Utility;
+using DailyCodingChallenge.Problems.Utility.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace DailyCodingChallenge.Problems
 
 		protected override void Run()
 		{
-			Console.WriteLine("Words' list: {0}.", words.ToList().AsString());
+			Console.WriteLine("Words' list: {0}.", words.AsString());
 			Console.WriteLine("Line size: {0}", size);
 
 			List<string> lines = GiustifyText(words, size);

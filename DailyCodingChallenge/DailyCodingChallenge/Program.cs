@@ -8,6 +8,14 @@ namespace DailyCodingChallenge
 	{
 		static void Main(string[] args)
 		{
+			DateTime startDate = new DateTime(2019, 1, 1);
+
+			double doubledays = DateTime.Now.Subtract(startDate).TotalDays;
+			int totalDays = (int)doubledays;
+			totalDays += (doubledays > totalDays) ? 1 : 0;
+			Console.WriteLine("Project start date: {0}\t\t\t\t\tDay:{1}\n", startDate.ToString().Split(' ')[0], totalDays);
+
+
 			bool continueWhile = true;
 			while (continueWhile)
 			{

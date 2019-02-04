@@ -1,4 +1,5 @@
 ﻿using DailyCodingChallenge.Problems.Utility;
+using DailyCodingChallenge.Problems.Utility.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("Matrix:\n[");
 			foreach(bool[] row in wallPositions)
 			{
-				Console.WriteLine("\t"+row.ToList().AsString());
+				Console.WriteLine("\t"+row.AsString());
 			}
 			Console.WriteLine("]");
 			Console.WriteLine("Starting position: " + startPosition);

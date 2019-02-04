@@ -1,4 +1,5 @@
 ﻿using DailyCodingChallenge.Problems.Utility;
+using DailyCodingChallenge.Problems.Utility.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace DailyCodingChallenge.Problems
 
 			int[] numbers = new int[] { 2, 1, 5, 7, 2, 0, 5 };
 
-			Console.WriteLine("Input list: {0}.", numbers.ToList().AsString());
+			Console.WriteLine("Input list: {0}.", numbers.AsString());
 			List<double> runningMedians = new List<double>();
 			foreach (int number in numbers)
 			{

@@ -1,4 +1,5 @@
 ﻿using DailyCodingChallenge.Problems.Utility;
+using DailyCodingChallenge.Problems.Utility.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,11 +83,11 @@ namespace DailyCodingChallenge.Problems
 			if (negativeCycleFound)
 			{
 				Console.WriteLine("Negative cycle founded.");
-				Console.WriteLine("Cycle: {0}", predecessor.ToList().AsString());
+				Console.WriteLine("Cycle: {0}", predecessor.AsString());
 			}
 			else
 				Console.WriteLine("No cycle founded.");
-			Console.WriteLine("Distances: {0}", distance.ToList().AsString());
+			Console.WriteLine("Distances: {0}", distance.AsString());
 		}
 	}
 }

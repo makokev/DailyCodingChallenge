@@ -11,7 +11,7 @@ namespace DailyCodingChallenge.Problems.Utility
 		public static string AsString<T>(this List<T> list)
 		{
 			StringBuilder sb = new StringBuilder();
-			sb.Append("[ ");
+			sb.Append("{ ");
 			for (int i = 0; i < list.Count; i++)
 			{
 				if (0 != i)
@@ -19,9 +19,8 @@ namespace DailyCodingChallenge.Problems.Utility
 
 				sb.Append(list[i].ToString());
 			}
-			sb.Append(" ]");
+			sb.Append(" }");
 			return sb.ToString();
 		}
-
 	}
 }

@@ -9,6 +9,9 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem011 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM011_DESCRIPTION;
+		protected override int Number => 11;
+
 		#region Static region
 
 		private static List<string> WORDS;
@@ -24,9 +27,7 @@ namespace DailyCodingChallenge.Problems
 		}
 
 		#endregion
-
-		public Problem011() : base(11, ProblemDescription.PROBLEM011_DESCRIPTION) { }
-
+		
 		protected override void Run()
 		{
 			AutocompleteSystem autocompleteSystem = new AutocompleteSystem();
@@ -45,6 +46,5 @@ namespace DailyCodingChallenge.Problems
 			words.ForEach(Console.WriteLine);
 			
 		}
-
 	}
 }

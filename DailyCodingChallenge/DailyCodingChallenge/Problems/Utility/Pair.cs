@@ -11,8 +11,8 @@ namespace DailyCodingChallenge.Problems.Utility
 
 		public Pair(T a, W b)
 		{
-			this.A = a;
-			this.B = b;
+			A = a;
+			B = b;
 		}
 
 		public T A { get; }

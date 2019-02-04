@@ -9,8 +9,8 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem003 : Problem
 	{
-
-		public Problem003() : base(3, ProblemDescription.PROBLEM003_DESCRIPTION) { }
+		protected override string Description => ProblemDescription.PROBLEM003_DESCRIPTION;
+		protected override int Number => 3;
 
 		protected override void Run()
 		{
@@ -30,7 +30,7 @@ namespace DailyCodingChallenge.Problems
 				Console.WriteLine("Wrong");
 		}
 
-		public string Serialize(BinaryNode<string> node)
+		private string Serialize(BinaryNode<string> node)
 		{
 			if (null == node)
 				return "null pointer";
@@ -45,8 +45,8 @@ namespace DailyCodingChallenge.Problems
 			sb.Append(")");
 			return sb.ToString();
 		}
-		
-		public BinaryNode<string> Deserialize(string serializedNode)
+
+		private BinaryNode<string> Deserialize(string serializedNode)
 		{
 			BinaryNode<string> leftNode = null, rightNode = null;
 			

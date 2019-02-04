@@ -5,19 +5,17 @@ namespace DailyCodingChallenge.Problems
 {
 	public class Problem001 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM001_DESCRIPTION;
+		protected override int Number => 1;
+
+		private List<int> _differences = new List<int>();
+
 		#region Input
 
 		private static int K = 17;
 		private static List<int> NUMBERS = new List<int> { 10, 15, 3, 7 };
-		
+
 		#endregion
-
-		private List<int> _differences;
-
-		public Problem001() : base(1, ProblemDescription.PROBLEM001_DESCRIPTION)
-		{
-			_differences = new List<int>();
-		}
 
 		protected override void Run()
 		{

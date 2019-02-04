@@ -8,14 +8,15 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem004 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM004_DESCRIPTION;
+		protected override int Number => 4;
+		
 		#region Input
 
 		private int[] values = new int[] { 3, 4, -1, 1, 2, 6 };
 
 		#endregion
-
-		public Problem004() : base(4, ProblemDescription.PROBLEM004_DESCRIPTION){ }
-
+		
 		protected override void Run()
 		{
 			List<int> list = values.ToList();

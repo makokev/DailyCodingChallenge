@@ -2,14 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DailyCodingChallenge.Problems
 {
 	class Problem020 : Problem
 	{
-		public Problem020() : base(20, ProblemDescription.PROBLEM020_DESCRIPTION) {	}
+		protected override string Description => ProblemDescription.PROBLEM020_DESCRIPTION;
+		protected override int Number => 20;
 
 		protected override void Run()
 		{

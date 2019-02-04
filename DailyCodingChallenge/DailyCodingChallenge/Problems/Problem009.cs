@@ -9,15 +9,15 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem009 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM009_DESCRIPTION;
+		protected override int Number => 9;
 
 		#region Input
 
 		private static int[] numbers = new int[]{ 5,-11,-3,1,-5 };
 
 		#endregion
-
-		public Problem009() : base(9, ProblemDescription.PROBLEM009_DESCRIPTION) { }
-
+		
 		protected override void Run()
 		{
 			List<int> list = numbers.ToList();
@@ -25,7 +25,7 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("Result: Largest sum = " + LargestSum(numbers));
 		}
 
-		public int LargestSum(int[] numbers)
+		private int LargestSum(int[] numbers)
 		{
 			int sum = 0;
 			List<int> list = numbers.ToList();

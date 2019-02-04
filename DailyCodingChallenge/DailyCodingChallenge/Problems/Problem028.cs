@@ -9,11 +9,15 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem028 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM028_DESCRIPTION;
+		protected override int Number => 28;
+
+		#region Input
 
 		private static string[] words = "La mamma andò al mercato tutta allegra e contenta.".Split(' ');
 		private static int size = 20;
 
-		public Problem028() : base(28, ProblemDescription.PROBLEM028_DESCRIPTION) {	}
+		#endregion
 
 		protected override void Run()
 		{

@@ -6,11 +6,12 @@ using System.Linq;
 // A generic problem. It contains its number and its description.
 public abstract class Problem
 {
+
 	#region Static region
 
 	// Dictionary containing pairs (problem_number, problem_type) used for dinamically initialization.
 	private static Dictionary<int, Type> _problems;
-
+	
 	// Creating and initialising the dictionary
 	static Problem()
 	{
@@ -25,7 +26,7 @@ public abstract class Problem
 		foreach (Type t in types)
 		{
 			problem = (Problem)Activator.CreateInstance(t);
-			_problems.Add(problem.ProblemNumber, t);
+			_problems.Add(problem.Number, t);
 		}
 	}
 
@@ -40,28 +41,7 @@ public abstract class Problem
 	}
 
 	#endregion
-
-	#region Private members
-
-	private int _problemNumber;
-	private string _description;
-
-	#endregion
-
-	#region Constructor
-
-	protected Problem(int problemNumber, string description)
-	{
-		if (problemNumber <= 0)
-			new ArgumentOutOfRangeException("Not-positive numbers are not ammitted!");
-		if (null == description)
-			new ArgumentNullException("Null description is not ammitted!");
-		_problemNumber = problemNumber;
-		_description = description;
-	}
-
-	#endregion
-
+	
 	#region Public methods and Properties
 
 	public void Start()
@@ -73,17 +53,18 @@ public abstract class Problem
 		Console.WriteLine("----------------------------------------------------------------------------------------------------");
 	}
 
-	public override string ToString() => "Problem" + _problemNumber;
-
-	public string Description => _description;
-
-	public int ProblemNumber => _problemNumber;
-
+	public override string ToString() => "Problem" + Number;
+	
 	#endregion
 
-	#region Abstract method
+	#region Abstract methods and properties
 
 	protected abstract void Run();
 
+	protected abstract string Description { get; }
+
+	protected abstract int Number { get; }
+
 	#endregion
+
 }

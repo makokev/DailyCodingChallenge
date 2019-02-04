@@ -5,12 +5,9 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem007 : Problem
 	{
-		#region Input
+		protected override string Description => ProblemDescription.PROBLEM007_DESCRIPTION;
+		protected override int Number => 7;
 
-		private static string numericString = "77";
-		
-		#endregion
-		
 		#region Static region
 
 		private static Dictionary<string, char> dictionary;
@@ -19,16 +16,21 @@ namespace DailyCodingChallenge.Problems
 		{
 			dictionary = new Dictionary<string, char>();
 			char c = 'a';
-			for (int i = 1; i <= 26; i++) {
-				dictionary.Add(""+i, c);
+			for (int i = 1; i <= 26; i++)
+			{
+				dictionary.Add("" + i, c);
 				c = (char)(c + 1);
 			}
 		}
 
 		#endregion
 
-		public Problem007() : base(7, ProblemDescription.PROBLEM007_DESCRIPTION) { }
+		#region Input
 
+		private static string numericString = "77";
+		
+		#endregion
+				
 		protected override void Run()
 		{
 			Console.WriteLine("Input: '" + numericString + "'.");

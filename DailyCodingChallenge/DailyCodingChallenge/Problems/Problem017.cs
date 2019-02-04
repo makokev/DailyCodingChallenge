@@ -9,9 +9,14 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem017 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM017_DESCRIPTION;
+		protected override int Number => 17;
+
+		#region Static region
+
 		private static string FILESYSTEM = "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext";
-		
-		public Problem017() : base(17, ProblemDescription.PROBLEM017_DESCRIPTION) { }
+
+		#endregion
 
 		protected override void Run()
 		{

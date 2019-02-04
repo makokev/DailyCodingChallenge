@@ -5,12 +5,17 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem019 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM019_DESCRIPTION;
+		protected override int Number => 19;
+
+		#region Static region
+
 		private static int N = 3;
 		private static int K = 3;
 		private static int[] COLORS = new int[] { 0, 1, 2 };
 		private static int[,] COSTS = new int[,] { { 2, 1, 2 }, { 2, 1, 1 }, { 2, 1, 1 } };
 
-		public Problem019() : base(19, ProblemDescription.PROBLEM019_DESCRIPTION) { }
+		#endregion
 
 		protected override void Run()
 		{
@@ -42,6 +47,5 @@ namespace DailyCodingChallenge.Problems
 				return minCost;
 			}
 		}
-
 	}
 }

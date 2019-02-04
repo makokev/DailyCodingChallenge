@@ -9,9 +9,10 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem012 : Problem
 	{
-		private readonly List<int> STEPS = new List<int>();
+		protected override string Description => ProblemDescription.PROBLEM012_DESCRIPTION;
+		protected override int Number => 12;
 
-		public Problem012() : base(12, ProblemDescription.PROBLEM012_DESCRIPTION) { }
+		private readonly List<int> STEPS = new List<int>();
 
 		protected override void Run()
 		{

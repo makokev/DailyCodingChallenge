@@ -6,7 +6,8 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem005 : Problem
 	{	
-		public Problem005() : base(5, ProblemDescription.PROBLEM005_DESCRIPTION) { }
+		protected override string Description => ProblemDescription.PROBLEM005_DESCRIPTION;
+		protected override int Number => 5;
 
 		protected override void Run()
 		{

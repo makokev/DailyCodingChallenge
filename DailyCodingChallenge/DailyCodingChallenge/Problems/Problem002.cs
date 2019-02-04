@@ -6,13 +6,14 @@ namespace DailyCodingChallenge.Problems
 {
 	public class Problem002 : Problem
 	{
+		protected override string Description => ProblemDescription.PROBLEM002_DESCRIPTION;
+		protected override int Number => 2;
+		
 		#region Input
 
 		private static List<int> NUMBERS = new List<int> { 1, 2, 3, 4, 5 };
 
 		#endregion
-
-		public Problem002() : base(2, ProblemDescription.PROBLEM002_DESCRIPTION) { }
 
 		protected override void Run()
 		{

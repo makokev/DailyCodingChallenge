@@ -8,9 +8,10 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem015 : Problem
 	{
-		private static List<string> STREAM = new List<string> {"string1", "string2", "string3", "string4", "string5" };
+		protected override string Description => ProblemDescription.PROBLEM015_DESCRIPTION;
+		protected override int Number => 15;
 
-		public Problem015() : base(15, ProblemDescription.PROBLEM015_DESCRIPTION){ }
+		private static List<string> STREAM = new List<string> {"string1", "string2", "string3", "string4", "string5" };
 
 		private double ConvertToPercentage(double value) => Math.Truncate(value * 10000) / 100;
 

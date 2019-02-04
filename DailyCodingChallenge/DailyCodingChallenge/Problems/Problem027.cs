@@ -9,9 +9,8 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem027 : Problem
 	{
-		private static Node<char> root = new Node<char>('\0');
-
-		public Problem027() : base(27, ProblemDescription.PROBLEM027_DESCRIPTION) {	}
+		protected override string Description => ProblemDescription.PROBLEM027_DESCRIPTION;
+		protected override int Number => 27;
 
 		protected override void Run()
 		{
@@ -22,6 +21,7 @@ namespace DailyCodingChallenge.Problems
 		}
 
 		private bool CheckParentesis(string text) {
+			Node<char> root = new Node<char>('\0');
 			Node<char> currentNode = root;
 			Node<char> node;
 			foreach (char c in text.ToArray()) {

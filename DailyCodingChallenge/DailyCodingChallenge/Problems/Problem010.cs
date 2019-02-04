@@ -9,7 +9,8 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem010 : Problem
 	{
-		public Problem010() : base(10, ProblemDescription.PROBLEM010_DESCRIPTION) { }
+		protected override string Description => ProblemDescription.PROBLEM010_DESCRIPTION;
+		protected override int Number => 10;
 
 		protected override void Run()
 		{
@@ -19,7 +20,8 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("JobScheduler started.");
 
 		}
-		public static void MyJob()
+
+		private static void MyJob()
 		{
 			Console.WriteLine("My Job executed!");
 		}

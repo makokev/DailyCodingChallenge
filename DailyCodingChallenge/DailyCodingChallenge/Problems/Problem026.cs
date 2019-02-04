@@ -9,7 +9,8 @@ namespace DailyCodingChallenge.Problems
 {
 	class Problem026 : Problem
 	{
-		public Problem026() : base(26, ProblemDescription.PROBLEM026_DESCRIPTION) {	}
+		protected override string Description => ProblemDescription.PROBLEM026_DESCRIPTION;
+		protected override int Number => 26;
 
 		protected override void Run()
 		{

@@ -55,8 +55,8 @@ namespace DailyCodingChallenge.Problems.Utility
 				{
 					if ((newNode.Value.CompareTo(node.Value) <= 0 && IncreasingOrder) || (newNode.Value.CompareTo(node.Value) >= 0 && !IncreasingOrder))
 					{
-						temp = node.Next;
-						node.Next = newNode;
+						temp = prev.Next;
+						prev.Next = newNode;
 						newNode.Next = temp;
 						inserted = true;
 					}

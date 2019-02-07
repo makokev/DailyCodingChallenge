@@ -41,5 +41,7 @@ namespace DailyCodingChallenge.Problems
 		public const string PROBLEM035_DESCRIPTION = "Given an array of strictly the characters 'R', 'G', and 'B', segregate the values of the array so that all the Rs come first, the Gs come second, and the Bs come last. You can only swap elements of the array.\nDo this in linear time and in-place.\nFor example, given the array['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should become['R', 'R', 'R', 'G', 'G', 'B', 'B'].";
 		public const string PROBLEM036_DESCRIPTION = "Given the root to a binary search tree, find the second largest node in the tree.";
 		public const string PROBLEM037_DESCRIPTION = "The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.\nFor example, given the set {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}.\nYou may also use a list or array to represent a set.";
+		public const string PROBLEM038_DESCRIPTION = "You have an N by N board. Write a function that, given N, returns the number of possible arrangements of the board where N queens can be placed on the board without threatening each other, i.e. no two queens share the same row, column, or diagonal.";
+
 	}
 }

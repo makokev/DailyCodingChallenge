@@ -27,14 +27,12 @@ namespace DailyCodingChallenge.Problems
 			{
 				domains.Add(new List<int>());
 				for(int j = 0; j < n; j++)
-				{
 					domains[i].Add(j);
-				}
 			}
 
 			int arrangements = GetQueensArrangements(domains);
-			string message = (arrangements > 0) ? arrangements.ToString() : "no possible configuration.";
-			Console.WriteLine("Queen arrangements in {0}x{0} board: {1}.", n, message);
+			string message = (arrangements > 0) ? arrangements.ToString() : "no possible configuration";
+			Console.WriteLine("Queens arrangements in {0}x{0} board: {1}.", n, message);
 		}
 
 		private int GetQueensArrangements(List<List<int>> domains)

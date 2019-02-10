@@ -17,8 +17,8 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("List B:");
 			List<int> b = ReadInputIntList(-1);
 
-			Console.WriteLine("List A: " + a.AsString());
-			Console.WriteLine("List B: " + b.AsString());
+			Console.WriteLine("List A: " + a.Print());
+			Console.WriteLine("List B: " + b.Print());
 
 
 			List<int> visited = new List<int>();

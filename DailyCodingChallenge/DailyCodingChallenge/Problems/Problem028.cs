@@ -22,7 +22,7 @@ namespace DailyCodingChallenge.Problems
 
 		protected override void Run()
 		{
-			Console.WriteLine("Words' list: {0}.", words.AsString());
+			Console.WriteLine("Words' list: {0}.", words.Print());
 			Console.WriteLine("Line size: {0}", size);
 
 			List<string> lines = GiustifyText(words, size);

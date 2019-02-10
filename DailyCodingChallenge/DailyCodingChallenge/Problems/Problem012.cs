@@ -34,7 +34,7 @@ namespace DailyCodingChallenge.Problems
 						break;
 				}
 			}
-			Console.Write("\nInserted steps: " + STEPS.AsString());
+			Console.Write("\nInserted steps: " + STEPS.Print());
 			Console.WriteLine("\nNumber of unique ways: " + CountStep(staircaseLength));
 		}
 

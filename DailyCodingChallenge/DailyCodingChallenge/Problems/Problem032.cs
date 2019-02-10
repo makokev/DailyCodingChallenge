@@ -83,11 +83,11 @@ namespace DailyCodingChallenge.Problems
 			if (negativeCycleFound)
 			{
 				Console.WriteLine("Negative cycle founded.");
-				Console.WriteLine("Cycle: {0}", predecessor.AsString());
+				Console.WriteLine("Cycle: {0}", predecessor.Print());
 			}
 			else
 				Console.WriteLine("No cycle founded.");
-			Console.WriteLine("Distances: {0}", distance.AsString());
+			Console.WriteLine("Distances: {0}", distance.Print());
 		}
 	}
 }

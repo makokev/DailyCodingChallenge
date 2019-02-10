@@ -45,7 +45,7 @@ namespace DailyCodingChallenge.Problems
 			foreach (int number in NUMBERS)
 				product *= number;
 
-			Console.Write("Result: " + NUMBERS.AsString());
+			Console.Write("Result: " + NUMBERS.Print());
 		}
 
 		// No division operator used: complexity O(n*n)
@@ -64,7 +64,7 @@ namespace DailyCodingChallenge.Problems
 				}
 			}
 
-			Console.Write("Result: " + NUMBERS.AsString());
+			Console.Write("Result: " + NUMBERS.Print());
 		}
 	}
 }

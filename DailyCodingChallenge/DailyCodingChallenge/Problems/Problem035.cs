@@ -16,7 +16,7 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			char[] chars = new char[] { 'G', 'B', 'R', 'R', 'B', 'R', 'G' };
-			Console.WriteLine("Initial vector: {0}.", chars.AsString());
+			Console.WriteLine("Initial vector: {0}.", chars.Print());
 			bool ordered = false;
 			char temp;
 			while (!ordered)
@@ -39,7 +39,7 @@ namespace DailyCodingChallenge.Problems
 					}
 				}
 			}
-			Console.WriteLine("Ordered vector: {0}.", chars.AsString());
+			Console.WriteLine("Ordered vector: {0}.", chars.Print());
 		}
 	}
 }

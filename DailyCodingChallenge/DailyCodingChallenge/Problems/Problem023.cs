@@ -29,7 +29,7 @@ namespace DailyCodingChallenge.Problems
 			Console.WriteLine("Matrix:\n[");
 			foreach(bool[] row in wallPositions)
 			{
-				Console.WriteLine("\t"+row.AsString());
+				Console.WriteLine("\t"+row.Print());
 			}
 			Console.WriteLine("]");
 			Console.WriteLine("Starting position: " + startPosition);

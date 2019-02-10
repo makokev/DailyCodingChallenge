@@ -14,7 +14,7 @@ namespace DailyCodingChallenge.Problems
 		{
 			Console.WriteLine("Insert input values:");
 			List<int> inputList = ReadInputIntList(-1);
-			Console.WriteLine("Inserted list: " + inputList.AsString());
+			Console.WriteLine("Inserted list: " + inputList.Print());
 
 			Console.Write("Insert the window size: ");
 			if (!int.TryParse(Console.ReadLine(), out int windowSize))
@@ -33,12 +33,12 @@ namespace DailyCodingChallenge.Problems
 			List<int> window = new List<int>();
 			for (int i = 0; i < windowSize; i++)
 				window.Add(inputList[i]);
-			Console.WriteLine("Windows = " + window.AsString() + " -> Max = " + window.Max());
+			Console.WriteLine("Windows = " + window.Print() + " -> Max = " + window.Max());
 			for (int i = windowSize; i < inputList.Count; i++)
 			{
 				window.RemoveAt(0);
 				window.Add(inputList[i]);
-				Console.WriteLine("Windows = " + window.AsString() + " -> Max = " + window.Max());
+				Console.WriteLine("Windows = " + window.Print() + " -> Max = " + window.Max());
 			}
 
 		}

@@ -8,18 +8,20 @@ namespace DailyCodingChallenge.Problems.Utility
 {
 	public static class ListExtensions
 	{
-		public static string AsString<T>(this List<T> list)
+		public static string Print<T>(this List<T> list, string separator = ", ", bool withBrackets = true)
 		{
 			StringBuilder sb = new StringBuilder();
-			sb.Append("{ ");
+			if(withBrackets)
+				sb.Append("{ ");
 			for (int i = 0; i < list.Count; i++)
 			{
 				if (0 != i)
-					sb.Append(", ");
+					sb.Append(separator);
 
 				sb.Append(list[i].ToString());
 			}
-			sb.Append(" }");
+			if(withBrackets)
+				sb.Append(" }");
 			return sb.ToString();
 		}
 	}

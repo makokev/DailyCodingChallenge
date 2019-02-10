@@ -20,7 +20,7 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			List<int> list = values.ToList();
-			Console.Write("Input: " + list.AsString());
+			Console.Write("Input: " + list.Print());
 			
 			int minMissing = (list.Count > 0) ? 1 : int.MinValue;
 

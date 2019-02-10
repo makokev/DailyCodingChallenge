@@ -12,9 +12,9 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			List<TimeInterval> times = ReadTimeIntervalList(-1);
-			Console.WriteLine("Time intervals:   " + times.AsString());
+			Console.WriteLine("Time intervals:   " + times.Print());
 			times.Sort();
-			Console.WriteLine("Sorted intervals: " + times.AsString());
+			Console.WriteLine("Sorted intervals: " + times.Print());
 
 			List<List<TimeInterval>> rooms = new List<List<TimeInterval>>();
 			foreach (TimeInterval time in times)
@@ -24,7 +24,7 @@ namespace DailyCodingChallenge.Problems
 
 			Console.WriteLine("Minimum number of Rooms required: " + rooms.Count);
 			foreach (List<TimeInterval> room in rooms) {
-				Console.WriteLine("Room: " + room.AsString());
+				Console.WriteLine("Room: " + room.Print());
 			}
 
 		}

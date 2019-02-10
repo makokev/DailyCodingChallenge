@@ -28,6 +28,14 @@ namespace DailyCodingChallenge.Problems.Utility
 			return builder.ToString();
 		}
 
+		public static string Reverse(this string text)
+		{
+			StringBuilder sb = new StringBuilder();
+			for (int i = text.Length - 1; i >= 0; i--)
+				sb.Append(text[i]);
+			return sb.ToString();
+		}
+
 		private static List<string> GiustifyLine(string line, int lineSize, int whitePercentage = 70)
 		{
 			List<string> lines = new List<string>();
@@ -54,7 +62,7 @@ namespace DailyCodingChallenge.Problems.Utility
 				StringBuilder sb = new StringBuilder();
 				foreach (string word in words)
 				{
-					maxWhite = (CharCount(words) >= lineSize*whitePercentage/100) ? (int)Math.Ceiling((decimal)paddingWhite / remainingWords) : 1;
+					maxWhite = (CharCount(words) >= lineSize * whitePercentage / 100) ? (int)Math.Ceiling((decimal)paddingWhite / remainingWords) : 1;
 					sb.Append(word);
 					if (paddingWhite > 0)
 					{
@@ -67,7 +75,7 @@ namespace DailyCodingChallenge.Problems.Utility
 				}
 				lines.Add(sb.ToString());
 			}
-			
+
 			return lines;
 		}
 
@@ -79,12 +87,5 @@ namespace DailyCodingChallenge.Problems.Utility
 			return count;
 		}
 
-		public static string Reverse(this string text)
-		{
-			StringBuilder sb = new StringBuilder();
-			for (int i = text.Length - 1; i >= 0; i--)
-				sb.Append(text[i]);
-			return sb.ToString();
-		}
 	}
 }

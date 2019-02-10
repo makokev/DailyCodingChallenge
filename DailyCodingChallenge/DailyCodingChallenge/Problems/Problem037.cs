@@ -19,7 +19,7 @@ namespace DailyCodingChallenge.Problems
 			int count = 0;
 			foreach (List<int> subset in subsets)
 			{
-				Console.WriteLine("Subset {0}: {1}", count, subset.AsString());
+				Console.WriteLine("Subset {0}: {1}", count, subset.Print());
 				count++;
 			}
 		}

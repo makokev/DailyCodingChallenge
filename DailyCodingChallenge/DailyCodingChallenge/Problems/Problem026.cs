@@ -16,7 +16,7 @@ namespace DailyCodingChallenge.Problems
 		{
 			Console.WriteLine("Insert list's elements:");
 			List<int> list = ReadInputIntList(-1);
-			Console.WriteLine("Inserted list: "+list.AsString());
+			Console.WriteLine("Inserted list: "+list.Print());
 			Console.Write("Insert the request element: ");
 			if (!int.TryParse(Console.ReadLine(), out int k))
 			{

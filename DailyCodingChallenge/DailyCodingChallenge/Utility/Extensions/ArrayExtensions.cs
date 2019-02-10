@@ -8,17 +8,19 @@ namespace DailyCodingChallenge.Problems.Utility.Extensions
 {
 	public static class ArrayExtensions
 	{
-		public static string AsString(this Array array)
+		public static string Print(this Array array, string separator = ", ", bool withBrackets = true)
 		{
 			StringBuilder sb = new StringBuilder();
-			sb.Append("[ ");
+			if(withBrackets)
+				sb.Append("[ ");
 			for (int i = 0; i < array.Length; i++)
 			{
 				if (0 != i)
-					sb.Append(", ");
+					sb.Append(separator);
 				sb.Append(array.GetValue(i).ToString());
 			}
-			sb.Append(" ]");
+			if(withBrackets)
+				sb.Append(" ]");
 			return sb.ToString();
 		}
 	}

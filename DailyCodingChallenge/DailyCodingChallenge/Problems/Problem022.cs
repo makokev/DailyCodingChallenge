@@ -17,14 +17,14 @@ namespace DailyCodingChallenge.Problems
 			List<string> words = new List<string> { "bed", "bath", "bedbath", "and", "beyond" };
 			string phrase = "bedbathandbeyond";
 
-			Console.WriteLine("Words: " + words.AsString());
+			Console.WriteLine("Words: " + words.Print());
 			Console.WriteLine("Phrase: '" + phrase + "'.");
 
 			Console.WriteLine("Parsing...");
 			List<List<string>> sentences = ParsePhraseInSentences(phrase, words);
 			if (null != sentences)
 				foreach (List<string> sentence in sentences)
-					Console.WriteLine("Sentence: " + sentence.AsString());
+					Console.WriteLine("Sentence: " + sentence.Print());
 			else
 				Console.WriteLine("No sentence translated.");
 		}

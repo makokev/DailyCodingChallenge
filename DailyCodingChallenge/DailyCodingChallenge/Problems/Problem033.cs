@@ -20,7 +20,7 @@ namespace DailyCodingChallenge.Problems
 
 			int[] numbers = new int[] { 2, 1, 5, 7, 2, 0, 5 };
 
-			Console.WriteLine("Input list: {0}.", numbers.AsString());
+			Console.WriteLine("Input list: {0}.", numbers.Print());
 			List<double> runningMedians = new List<double>();
 			foreach (int number in numbers)
 			{
@@ -28,7 +28,7 @@ namespace DailyCodingChallenge.Problems
 				runningMedians.Add(GetMedian(sortedList));
 			}
 
-			Console.WriteLine("Running medians: {0}.", runningMedians.AsString());
+			Console.WriteLine("Running medians: {0}.", runningMedians.Print());
 		}
 
 		private double GetMedian(SortedList<int> sortedList)

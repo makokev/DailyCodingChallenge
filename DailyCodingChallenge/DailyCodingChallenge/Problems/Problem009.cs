@@ -21,7 +21,7 @@ namespace DailyCodingChallenge.Problems
 		protected override void Run()
 		{
 			List<int> list = numbers.ToList();
-			Console.WriteLine("Input: " + list.AsString());
+			Console.WriteLine("Input: " + list.Print());
 			Console.WriteLine("Result: Largest sum = " + LargestSum(numbers));
 		}
 

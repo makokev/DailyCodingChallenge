@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DailyCodingChallenge.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DailyCodingChallenge.Problems.Utility
 {
 	class SortedList<ValueType> where ValueType : IComparable<ValueType>
 	{
-		private SortedNode Root { get; set; }
+		private LinkedNode<ValueType> Root { get; set; }
 		public int Count { get; private set; }
 		public bool IncreasingOrder { get; private set; }
 
@@ -21,6 +22,10 @@ namespace DailyCodingChallenge.Problems.Utility
 
 		public SortedList() : this(true) { }
 
+		/// <summary>
+		/// Return a new SortedList in with the ordering in reverted.
+		/// </summary>
+		/// <returns>The reversed SortedList</returns>
 		public SortedList<ValueType> RevertList()
 		{
 			SortedList<ValueType> reversed = new SortedList<ValueType>(!IncreasingOrder);
@@ -37,7 +42,7 @@ namespace DailyCodingChallenge.Problems.Utility
 		/// <param name="value">The value that needs to be added.</param>
 		public void Add(ValueType value)
 		{
-			SortedNode newNode = new SortedNode(value);
+			LinkedNode<ValueType> newNode = new LinkedNode<ValueType>(value);
 			if (null == Root)
 				Root = newNode;
 			else if ((newNode.Value.CompareTo(Root.Value) <= 0 && IncreasingOrder) || (newNode.Value.CompareTo(Root.Value) >= 0 && !IncreasingOrder))
@@ -47,13 +52,13 @@ namespace DailyCodingChallenge.Problems.Utility
 			}
 			else
 			{
-				SortedNode temp;
-				SortedNode node = Root;
-				SortedNode prev = null;
+				LinkedNode<ValueType> temp;
+				LinkedNode<ValueType> node = Root;
+				LinkedNode<ValueType> prev = null;
 				bool inserted = false;
 				while (node != null && !inserted)
 				{
-					if ((newNode.Value.CompareTo(node.Value) <= 0 && IncreasingOrder) || (newNode.Value.CompareTo(node.Value) >= 0 && !IncreasingOrder))
+					if ((newNode.CompareTo(node) <= 0 && IncreasingOrder) || (newNode.CompareTo(node) >= 0 && !IncreasingOrder))
 					{
 						temp = prev.Next;
 						prev.Next = newNode;
@@ -79,8 +84,8 @@ namespace DailyCodingChallenge.Problems.Utility
 		/// <returns>True if it is removed, otherwise false.</returns>
 		public bool Remove(ValueType value)
 		{
-			SortedNode node = Root;
-			SortedNode prev = null;
+			LinkedNode<ValueType> node = Root;
+			LinkedNode<ValueType> prev = null;
 			while(node != null)
 			{
 				if (value.CompareTo(node.Value) < 0)
@@ -103,7 +108,7 @@ namespace DailyCodingChallenge.Problems.Utility
 		public List<ValueType> ToList()
 		{
 			List<ValueType> list = new List<ValueType>();
-			SortedNode node = Root;
+			LinkedNode<ValueType> node = Root;
 			while(null != node)
 			{
 				list.Add(node.Value);
@@ -130,20 +135,6 @@ namespace DailyCodingChallenge.Problems.Utility
 			Root = Root.Next;
 			Count--;
 			return true;
-		}
-
-		class SortedNode : IComparable<SortedNode>
-		{
-			public ValueType Value { get; private set; }
-			public SortedNode Next { get; set; }
-
-			public SortedNode(ValueType value)
-			{
-				Value = value;
-				Next = null;
-			}
-			
-			public int CompareTo(SortedNode other) => Value.CompareTo(other.Value);
 		}
 	}
 }

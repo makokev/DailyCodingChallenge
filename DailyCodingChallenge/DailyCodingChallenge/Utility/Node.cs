@@ -61,9 +61,7 @@ namespace DailyCodingChallenge.Problems.Utility
 			
 		}
 
-		public override string ToString()
-		{
-			return "Node("+Value+")";
-		}
+		public override string ToString() => "Node("+Value+")";
+
 	}
 }

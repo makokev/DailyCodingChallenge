@@ -9,4 +9,4 @@ I'm trying to be constant but it's not easy. Some days I don't have found enough
 
 The problems are taken from the mailing-list of the official web site: **https://dailycodingproblem.com**.
 
-Enjoy my solution and write me for any question or suggestion :)
+Enjoy my solutions and write me for any question or suggestion :)

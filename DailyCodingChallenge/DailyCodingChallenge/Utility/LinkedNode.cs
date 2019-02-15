@@ -13,7 +13,7 @@ namespace DailyCodingChallenge.Utility
 	/// <typeparam name="ValueType">The value's type</typeparam>
 	class LinkedNode<ValueType> : IComparable<LinkedNode<ValueType>> where ValueType : IComparable<ValueType>
 	{
-		public ValueType Value { get; private set; }
+		public ValueType Value { get; set; }
 		public LinkedNode<ValueType> Next { get; set; }
 
 		public LinkedNode(ValueType value)

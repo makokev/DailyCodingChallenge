@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace DailyCodingChallenge.Problems.Utility
 {
 	class Couple<T>
@@ -13,20 +15,21 @@ namespace DailyCodingChallenge.Problems.Utility
 			Y = y;
 		}
 
-		public override string ToString()
+		public override bool Equals(object obj)
 		{
-			return "(" + X + "," + Y + ")";
+			Couple<T> couple = obj as Couple<T>;
+			if (null == couple)
+				throw new InvalidCastException("Invalid cast operation. Obj is not a Copule<T>.");
+			return base.Equals(couple);
 		}
 
-		public static bool operator ==(Couple<T> first, Couple<T> second)
-		{
-			return first.X.Equals(second.X) && first.Y.Equals(second.Y);
-		}
+		public override string ToString() => "(" + X + "," + Y + ")";
 
-		public static bool operator !=(Couple<T> first, Couple<T> second)
-		{
-			return !(first == second);
-		}
+		public bool Equals(Couple<T> couple) => X.Equals(couple.X) && Y.Equals(couple.Y);
+
+		public static bool operator ==(Couple<T> first, Couple<T> second) => first.X.Equals(second.X) && first.Y.Equals(second.Y);
+
+		public static bool operator !=(Couple<T> first, Couple<T> second) => !(first == second);
 	}
 
 }

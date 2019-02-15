@@ -1,5 +1,6 @@
 ﻿using DailyCodingChallenge.Utility;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DailyCodingChallenge.Problems.Utility
 {
-	class SortedList<ValueType> where ValueType : IComparable<ValueType>
+	class SortedList<ValueType> : IEnumerable<ValueType> where ValueType : IComparable<ValueType>
 	{
 		private LinkedNode<ValueType> Root { get; set; }
 		public int Count { get; private set; }
@@ -76,7 +77,13 @@ namespace DailyCodingChallenge.Problems.Utility
 			}
 			Count++;
 		}
-		
+
+		public void AddAll(IEnumerable<ValueType> list)
+		{
+			foreach (ValueType value in list)
+				Add(value);
+		}
+
 		/// <summary>
 		/// Remove the first occurrence of the value.
 		/// </summary>
@@ -101,6 +108,30 @@ namespace DailyCodingChallenge.Problems.Utility
 				}
 				prev = node;
 				node = node.Next;
+			}
+			return false;
+		}
+
+		public bool RemoveAt(int index)
+		{
+			LinkedNode<ValueType> node = Root;
+			LinkedNode<ValueType> prev = null;
+			int i = 0;
+			while (node != null && i < index)
+			{
+				prev = node;
+				node = node.Next;
+				i++;
+			}
+
+			if (i == index && node != null)
+			{
+				if (null == prev)
+					Root = node.Next;
+				else
+					prev.Next = node.Next;
+				Count--;
+				return true;
 			}
 			return false;
 		}
@@ -136,5 +167,52 @@ namespace DailyCodingChallenge.Problems.Utility
 			Count--;
 			return true;
 		}
+
+		public IEnumerator<ValueType> GetEnumerator()
+		{
+			LinkedNode<ValueType> node = Root;
+			while (null != node)
+			{
+				yield return node.Value;
+				node = node.Next;
+			}
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return GetEnumerator();
+		}
+
+		public ValueType this[int index]
+		{
+			get
+			{
+				if (index >= Count || index < 0)
+					throw new IndexOutOfRangeException();
+				LinkedNode<ValueType> node = Root;
+				int i = 0;
+				while (node != null && i < index)
+				{
+					node = node.Next;
+					i++;
+				}
+				return node.Value;
+			}
+			set
+			{
+				if (index >= Count || index < 0)
+					throw new IndexOutOfRangeException();
+				LinkedNode<ValueType> node = Root;
+				int i = 0;
+				while (node != null && i < index)
+				{
+					node = node.Next;
+					i++;
+				}
+				node.Value = value;
+			}
+		}
+
+
 	}
 }

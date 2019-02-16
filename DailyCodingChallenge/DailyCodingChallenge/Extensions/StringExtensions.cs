@@ -87,5 +87,24 @@ namespace DailyCodingChallenge.Problems.Utility
 			return count;
 		}
 
+		public static bool IsPalindrome(this string s)
+		{
+			for (int i = 0; i < s.Length / 2; i++)
+			{
+				if (s[i] != s[s.Length - 1 - i])
+					return false;
+			}
+			return true;
+		}
+
+		public static List<string> GetAllSubstrings(this string s, int substringLength)
+		{
+			if (substringLength <= 0 || substringLength > s.Length)
+				throw new ArgumentOutOfRangeException("substringLength", "0 < substringLength <= string.Length()");
+			List<string> substrings = new List<string>();
+			for(int i = 0; i <= s.Length - substringLength; i++)
+				substrings.Add(s.Substring(i, substringLength));
+			return substrings;
+		}
 	}
 }

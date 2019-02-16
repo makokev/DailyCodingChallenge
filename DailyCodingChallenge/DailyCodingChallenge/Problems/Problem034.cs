@@ -14,18 +14,6 @@ namespace DailyCodingChallenge.Problems
 
 		protected override void Run()
 		{
-			/*
-			 * 1234
-			 * 12341
-			 * 123421
-			 * 1234321 PAL
-			 * 
-			 * 1234
-			 * 41234
-			 * 431234
-			 * 4321234 PAL
-			 */
-			
 			Console.Write("Insert the string: ");
 			string s = Console.ReadLine().Trim();
 			Console.WriteLine("String read: {0}.", s);
@@ -37,7 +25,7 @@ namespace DailyCodingChallenge.Problems
 		private List<string> GetAllPalindromes(string s)
 		{
 			List<string> list = new List<string>();
-			if (IsPalindrome(s))
+			if (s.IsPalindrome())
 				list.Add(s);
 			else
 			{
@@ -62,7 +50,7 @@ namespace DailyCodingChallenge.Problems
 			string first = "";
 			foreach (string p in palindromes)
 			{
-				if (IsPalindrome(p))
+				if (p.IsPalindrome())
 				{
 					if ("" == first)
 						first = p;
@@ -73,14 +61,5 @@ namespace DailyCodingChallenge.Problems
 			return first;
 		}
 
-		private bool IsPalindrome(string s)
-		{
-			for(int i = 0; i < s.Length/2; i++)
-			{
-				if (s[i] != s[s.Length-1 - i])
-					return false;
-			}
-			return true;
-		}
 	}
 }

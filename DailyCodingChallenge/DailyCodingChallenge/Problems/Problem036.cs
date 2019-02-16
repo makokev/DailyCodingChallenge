@@ -23,7 +23,7 @@ namespace DailyCodingChallenge.Problems
 		private int GetSecondMaxValue(BinaryNode<int> root)
 		{
 			Couple<int> couple = GetTwoMaxValue(root);
-			return (couple.X > couple.Y) ? couple.Y : couple.X;
+			return (couple.First > couple.Second) ? couple.Second : couple.First;
 		}
 
 		private Couple<int> GetTwoMaxValue(BinaryNode<int> root)
@@ -35,15 +35,15 @@ namespace DailyCodingChallenge.Problems
 
 			// Left child
 			Couple<int> left = GetTwoMaxValue(root.Left);
-			sortedList.Add(left.X);
-			sortedList.Add(left.Y);
+			sortedList.Add(left.First);
+			sortedList.Add(left.Second);
 			
 			// Right child
 			if (root.ChildrenCount() == 2)
 			{
 				Couple<int> right = GetTwoMaxValue(root.Right);
-				sortedList.Add(right.X);
-				sortedList.Add(right.Y);
+				sortedList.Add(right.First);
+				sortedList.Add(right.Second);
 			}
 			
 			// Root

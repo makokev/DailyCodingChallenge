@@ -73,7 +73,7 @@ namespace DailyCodingChallenge.Problems
 		{
 			int aliveNeighboursCount = 0;
 			foreach(Couple<int> c in GetAvailableNeighbours(x, y))
-				if(ALIVE == space[c.X, c.Y])
+				if(ALIVE == space[c.First, c.Second])
 					aliveNeighboursCount++;
 			return aliveNeighboursCount;
 		}
@@ -88,7 +88,7 @@ namespace DailyCodingChallenge.Problems
 					if(i != 0 || j != 0)
 					{
 						Couple<int> c = new Couple<int>(x + i, y + j);
-						if (c.X >= 0 && c.X < _spaceDimension && c.Y >= 0 && c.Y < _spaceDimension)
+						if (c.First >= 0 && c.First < _spaceDimension && c.Second >= 0 && c.Second < _spaceDimension)
 							list.Add(c);
 					}
 				}

@@ -9,33 +9,22 @@ namespace DailyCodingChallenge.Problems.Utility
 	class Pair<T, W>
 	{
 
-		public Pair(T a, W b)
+		public Pair(T first, W second)
 		{
-			A = a;
-			B = b;
+			First = first;
+			Second = second;
 		}
 
-		public T A { get; }
-		public W B { get; }
+		public T First { get; }
+		public W Second { get; }
 
-		public override string ToString()
-		{
-			return "(" + A + ", " + B + ")";
-		}
+		public override string ToString() =>  "(" + First + ", " + Second + ")";
 
-		public static Pair<T, W> Cons(T a, W b)
-		{
-			return new Pair<T, W>(a, b);
-		}
+		public static Pair<T, W> Cons(T first, W second) => new Pair<T, W>(first, second);
 
-		public static T Car(Pair<T, W> pair)
-		{
-			return pair.A;
-		}
+		public static T Car(Pair<T, W> pair) => pair.First;
 
-		public static W Cdr(Pair<T, W> pair)
-		{
-			return pair.B;
-		}
+		public static W Cdr(Pair<T, W> pair) => pair.Second;
+
 	}
 }

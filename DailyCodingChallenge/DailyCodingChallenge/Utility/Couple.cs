@@ -6,13 +6,13 @@ namespace DailyCodingChallenge.Problems.Utility
 	class Couple<T>
 	{
 
-		public T X { get; private set; }
-		public T Y { get; private set; }
+		public T First { get; private set; }
+		public T Second { get; private set; }
 
-		public Couple(T x, T y)
+		public Couple(T first, T second)
 		{
-			X = x;
-			Y = y;
+			First = first;
+			Second = second;
 		}
 
 		public override bool Equals(object obj)
@@ -23,13 +23,13 @@ namespace DailyCodingChallenge.Problems.Utility
 			return base.Equals(couple);
 		}
 
-		public override string ToString() => "(" + X + "," + Y + ")";
+		public override string ToString() => "(" + First + "," + Second + ")";
 
-		public bool Equals(Couple<T> couple) => X.Equals(couple.X) && Y.Equals(couple.Y);
+		public bool Equals(Couple<T> couple) => First.Equals(couple.First) && Second.Equals(couple.Second);
 
-		public static bool operator ==(Couple<T> first, Couple<T> second) => first.X.Equals(second.X) && first.Y.Equals(second.Y);
+		public static bool operator ==(Couple<T> couple1, Couple<T> copule2) => couple1.First.Equals(copule2.First) && couple1.Second.Equals(copule2.Second);
 
-		public static bool operator !=(Couple<T> first, Couple<T> second) => !(first == second);
+		public static bool operator !=(Couple<T> couple1, Couple<T> couple2) => !(couple1 == couple2);
 	}
 
 }

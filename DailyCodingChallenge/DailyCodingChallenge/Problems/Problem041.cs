@@ -25,10 +25,10 @@ namespace DailyCodingChallenge.Problems
 			Dictionary<string, List<string>> dictionary = new Dictionary<string, List<string>>();
 			foreach(Couple<string> couple in couples)
 			{
-				if (dictionary.Keys.Contains(couple.X))
-					dictionary[couple.X].Add(couple.Y);
+				if (dictionary.Keys.Contains(couple.First))
+					dictionary[couple.First].Add(couple.Second);
 				else
-					dictionary[couple.X] = new List<string> { couple.Y };
+					dictionary[couple.First] = new List<string> { couple.Second };
 			}
 
 			List<string> path = GetPath(dictionary, startingPoint);

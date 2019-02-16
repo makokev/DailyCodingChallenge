@@ -8,6 +8,7 @@ namespace DailyCodingChallenge
 	{
 		static void Main(string[] args)
 		{
+			Console.SetWindowSize(Console.WindowWidth, Console.WindowHeight + 5);
 			DateTime startDate = new DateTime(2019, 1, 1);
 
 			double doubledays = DateTime.Now.Subtract(startDate).TotalDays;
@@ -15,8 +16,8 @@ namespace DailyCodingChallenge
 			totalDays += (doubledays > totalDays) ? 1 : 0;
 			Console.WriteLine("Project start date: {0}\t\t\t\t\tDay:{1}\n", startDate.ToString().Split(' ')[0], totalDays);
 
-
 			bool continueWhile = true;
+			
 			while (continueWhile)
 			{
 				bool parsingSuccessed = false;
@@ -56,7 +57,16 @@ namespace DailyCodingChallenge
 
 					// If the problem exists, run the implementation
 					if (null != p)
+					{
 						p.Start();
+						Console.Write("Would you like run another problem (y/n)? ");
+						string response = Console.ReadLine();
+						if (!response.ToLower().Equals("y"))
+						{
+							continueWhile = false;
+							Console.WriteLine("Exit.");
+						}
+					}
 					else
 						Console.WriteLine("Problem " + problemNumber + " doesn't exist.\n");
 				}

@@ -87,7 +87,6 @@ namespace DailyCodingChallenge.Problems.Utility
 			UpdateLockedParent(1);
 		}
 
-
 		private bool AreAncestorsLocked() {
 			BinaryLockableNode<ValueType> currentNode = this;
 			while(null != currentNode.Parent)

@@ -80,8 +80,11 @@ namespace DailyCodingChallenge.Problems.Utility
 
 		public void AddAll(IEnumerable<ValueType> list)
 		{
-			foreach (ValueType value in list)
-				Add(value);
+			if (list != null)
+			{
+				foreach (ValueType value in list)
+					Add(value);
+			}
 		}
 
 		/// <summary>
@@ -95,9 +98,9 @@ namespace DailyCodingChallenge.Problems.Utility
 			LinkedNode<ValueType> prev = null;
 			while(node != null)
 			{
-				if (value.CompareTo(node.Value) < 0)
+				if (node.Value.CompareTo(value) < 0)
 					return false;
-				if(value.CompareTo(node.Value) == 0)
+				if(node.Value.CompareTo(value) == 0)
 				{
 					if (null == prev)
 						Root = node.Next;
@@ -148,26 +151,6 @@ namespace DailyCodingChallenge.Problems.Utility
 			return list;
 		}
 
-		/// <summary>
-		/// Return the first value if exists, otherwise an Exception is throw.
-		/// </summary>
-		/// <returns></returns>
-		public ValueType First()
-		{
-				if (0 == Count)
-					throw new Exception("No such element. The list is empty.");
-				return Root.Value;
-		}
-
-		private bool RemoveFirst()
-		{
-			if (0 == Count)
-				return false;
-			Root = Root.Next;
-			Count--;
-			return true;
-		}
-
 		public IEnumerator<ValueType> GetEnumerator()
 		{
 			LinkedNode<ValueType> node = Root;
@@ -178,10 +161,7 @@ namespace DailyCodingChallenge.Problems.Utility
 			}
 		}
 
-		IEnumerator IEnumerable.GetEnumerator()
-		{
-			return GetEnumerator();
-		}
+		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
 		public ValueType this[int index]
 		{
@@ -197,19 +177,6 @@ namespace DailyCodingChallenge.Problems.Utility
 					i++;
 				}
 				return node.Value;
-			}
-			set
-			{
-				if (index >= Count || index < 0)
-					throw new IndexOutOfRangeException();
-				LinkedNode<ValueType> node = Root;
-				int i = 0;
-				while (node != null && i < index)
-				{
-					node = node.Next;
-					i++;
-				}
-				node.Value = value;
 			}
 		}
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DailyCodingChallenge.Problems.Utility
 {
-	class TimeInterval : IComparable
+	class TimeInterval : IComparable<TimeInterval>
 	{
 		public int StartTime { get; private set; }
 		public int EndTime { get; private set; }
@@ -14,31 +14,37 @@ namespace DailyCodingChallenge.Problems.Utility
 		public TimeInterval(int startTime, int endTime)
 		{
 			if (startTime < 0)
-				throw new ArgumentOutOfRangeException("startTime", "startTime must be not negative (startTime >= 0).");
+				throw new ArgumentOutOfRangeException("startTime", "The parameter must be not negative (startTime >= 0).");
 			if (endTime < 0 || endTime <= startTime)
-				throw new ArgumentOutOfRangeException("endTime", "endTime must be not negative and greather than startTime (0 <= startTime < endTime).");
+				throw new ArgumentOutOfRangeException("endTime", "The parameter must be not negative and greather than startTime (0 <= startTime < endTime).");
 
 			StartTime = startTime;
 			EndTime = endTime;
 		}
 
-		public bool IsOverlapping(TimeInterval timeInterval) => !(EndTime <= timeInterval.StartTime || timeInterval.EndTime <= StartTime);
+		public bool IsOverlapping(TimeInterval timeInterval) => (null == timeInterval) ? false : !(EndTime <= timeInterval.StartTime || timeInterval.EndTime <= StartTime);
 
 		public override string ToString() => "(" + StartTime + "," + EndTime + ")";
 
-		public int CompareTo(object obj)
+		public int CompareTo(object other)
 		{
-			TimeInterval timeInterval = obj as TimeInterval;
+			TimeInterval timeInterval = other as TimeInterval;
 			if (null == timeInterval)
-				throw new ArgumentException("obj", "The object passed is not an instance of TimeInterval.");
+				throw new ArgumentException("other", "The parameter is not an instance of TimeInterval.");
+			return CompareTo(timeInterval);
+		}
 
-			if (StartTime < timeInterval.StartTime)
+		public int CompareTo(TimeInterval other)
+		{
+			if (null == other)
+				throw new ArgumentException("other", "The parameter is null.");
+
+			if (StartTime < other.StartTime)
 				return -1;
-			else if (StartTime > timeInterval.StartTime)
+			else if (StartTime > other.StartTime)
 				return 1;
 			else
-				return (EndTime - timeInterval.EndTime);
-
+				return (EndTime - other.EndTime);
 		}
 	}
 }

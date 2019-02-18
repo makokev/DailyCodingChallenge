@@ -34,6 +34,21 @@ namespace DailyCodingChallenge.Problems.Utility
 			return count;
 		}
 
+		public override bool Equals(object obj)
+		{
+			BinaryNode<ValueType> other = obj as BinaryNode<ValueType>;
+			return (other != null) ? Equals(other) : false;
+		}
+
+		public bool Equals(BinaryNode<ValueType> other)
+		{
+			bool result = (other != null);
+			result = (result == false) ? false : Value.Equals(other.Value);
+			result = (result == false) ? false : (null == Left && null == other.Left) || (Left != null && other.Left != null && Left.Equals(other.Left));
+			result = (result == false) ? false : (null == Right && null == other.Right) || (Right != null && other.Right != null && Right.Equals(other.Right));
+			return result;
+		}
+
 		public void PrintTree()
 		{
 			PrintTree("", true);
@@ -51,6 +66,15 @@ namespace DailyCodingChallenge.Problems.Utility
 				Left.PrintTree(indent, false);
 				Right.PrintTree(indent, true);
 			}
+		}
+
+		public override int GetHashCode()
+		{
+			var hashCode = -413484985;
+			hashCode = hashCode * -1521134295 + EqualityComparer<BinaryNode<ValueType>>.Default.GetHashCode(Left);
+			hashCode = hashCode * -1521134295 + EqualityComparer<BinaryNode<ValueType>>.Default.GetHashCode(Right);
+			hashCode = hashCode * -1521134295 + EqualityComparer<ValueType>.Default.GetHashCode(Value);
+			return hashCode;
 		}
 	}
 }

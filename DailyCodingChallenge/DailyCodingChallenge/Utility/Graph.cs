@@ -62,14 +62,18 @@ namespace DailyCodingChallenge.Problems.Utility
 			public override bool Equals(object obj)
 			{
 				Edge e = obj as Edge;
-				if (null == e)
-					return false;
-				return Equals(e);
+				return (null == e) ? false : Equals(e);
 			}
 
-			public bool Equals(Edge e)
+			public bool Equals(Edge e) => (null == e) ? false : (From == e.From && To == e.To && Cost == e.Cost);
+
+			public override int GetHashCode()
 			{
-				return From == e.From && To == e.To && Cost == e.Cost;
+				var hashCode = 456375713;
+				hashCode = hashCode * -1521134295 + From.GetHashCode();
+				hashCode = hashCode * -1521134295 + To.GetHashCode();
+				hashCode = hashCode * -1521134295 + Cost.GetHashCode();
+				return hashCode;
 			}
 		}
 	}

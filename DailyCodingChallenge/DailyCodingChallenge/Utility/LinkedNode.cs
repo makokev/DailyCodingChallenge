@@ -22,8 +22,11 @@ namespace DailyCodingChallenge.Utility
 			Next = null;
 		}
 
-		public int CompareTo(LinkedNode<ValueType> other) => Value.CompareTo(other.Value);
-
+		public int CompareTo(LinkedNode<ValueType> other) {
+			if (null == other)
+				throw new ArgumentNullException("other", "the parameter is null.");
+			return Value.CompareTo(other.Value);
+		}
 	}
 
 }

@@ -15,8 +15,8 @@ namespace DailyCodingChallenge.Problems.Utility
 			Second = second;
 		}
 
-		public T First { get; }
-		public W Second { get; }
+		public T First { get; private set; }
+		public W Second { get; private set; }
 
 		public override string ToString() =>  "(" + First + ", " + Second + ")";
 

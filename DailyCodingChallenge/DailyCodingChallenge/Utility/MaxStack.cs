@@ -46,7 +46,6 @@ namespace DailyCodingChallenge.Utility
 			}
 		}
 
-
 		/// <summary>
 		/// Remove and return the first value in the stack (LIFO).
 		/// If the stack is empty, default value is returned.
@@ -67,7 +66,7 @@ namespace DailyCodingChallenge.Utility
 		/// Return the max value in the stack.
 		/// </summary>
 		/// <returns>The max value in the stack</returns>
-		public ValueType Max() => StackMaxRoot.Value;
+		public ValueType Max() => (StackMaxRoot != null) ? StackMaxRoot.Value : default(ValueType);
 	}
 
 	

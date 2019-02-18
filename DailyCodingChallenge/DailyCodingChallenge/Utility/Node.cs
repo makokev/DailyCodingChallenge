@@ -27,6 +27,8 @@ namespace DailyCodingChallenge.Problems.Utility
 		
 		public void AddChild(Node<ValueType> child)
 		{
+			if (null == child)
+				throw new ArgumentNullException("child", "the parameter is null.");
 			child.ParentNode = this;
 			_children.Add(child);
 		}

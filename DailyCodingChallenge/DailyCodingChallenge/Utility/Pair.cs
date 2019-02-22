@@ -8,15 +8,14 @@ namespace DailyCodingChallenge.Problems.Utility
 {
 	class Pair<T, W>
 	{
+		public T First { get; private set; }
+		public W Second { get; private set; }
 
 		public Pair(T first, W second)
 		{
 			First = first;
 			Second = second;
 		}
-
-		public T First { get; private set; }
-		public W Second { get; private set; }
 
 		public override string ToString() =>  "(" + First + ", " + Second + ")";
 

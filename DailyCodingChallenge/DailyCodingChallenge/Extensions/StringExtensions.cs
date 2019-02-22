@@ -8,7 +8,7 @@ namespace DailyCodingChallenge.Problems.Utility
 {
 	public static class StringExtensions
 	{
-		public static string Giustify(this string text, int lineSize, int whitePercentage = 70) {
+		public static string Justify(this string text, int lineSize, int whitePercentage = 70) {
 			StringBuilder sb = new StringBuilder();
 			
 			List<string> lines = text.Trim().Split('\n').ToList();

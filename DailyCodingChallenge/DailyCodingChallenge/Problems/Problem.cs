@@ -47,7 +47,7 @@ public abstract class Problem
 	public void Start()
 	{
 		Console.WriteLine("--------------------------------------------  " + ToString() + "  --------------------------------------------");
-		Console.WriteLine(Description.Giustify(100));
+		Console.WriteLine(Description.Justify(100));
 		Run();
 		Console.WriteLine("\nEnd Problem.\n");
 		Console.WriteLine("----------------------------------------------------------------------------------------------------");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,11 @@ namespace DailyCodingChallenge.Problems.Extensions
 			if(withBrackets)
 				sb.Append(" ]");
 			return sb.ToString();
+		}
+		public static IEnumerable<T> ToEnumerable<T>(this Array target)
+		{
+			foreach (var item in target)
+				yield return (T)item;
 		}
 	}
 }

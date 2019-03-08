@@ -59,5 +59,7 @@ namespace DailyCodingChallenge.Problems
 		public const string PROBLEM053_DESCRIPTION = "Implement a queue using two stacks. Recall that a queue is a FIFO (first-in, first-out) data structure with the following methods: enqueue, which inserts an element into the queue, and dequeue, which removes it.";
 		public const string PROBLEM054_DESCRIPTION = "Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits. The objective is to fill the grid with the constraint that every row, column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.\nImplement an efficient sudoku solver.";
 		public const string PROBLEM055_DESCRIPTION = "Implement a URL shortener with the following methods:\n - shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.\n - restore(short), which expands the shortened string into the original url.If no such shortened string exists, return null.\n\nHint: What if we enter the same URL twice?";
+		public const string PROBLEM056_DESCRIPTION = "Given an undirected graph represented as an adjacency matrix and an integer k, write a function to determine whether each vertex in the graph can be colored such that no two adjacent vertices share the same color using at most k colors.";
+
 	}
 }

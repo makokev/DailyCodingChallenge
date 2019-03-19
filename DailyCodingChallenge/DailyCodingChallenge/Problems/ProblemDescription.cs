@@ -64,6 +64,6 @@ namespace DailyCodingChallenge.Problems
 		public const string PROBLEM058_DESCRIPTION = "An sorted array of integers was rotated an unknown number of times.\nGiven such an array, find the index of the element in the array in faster than linear time.If the element doesn't exist in the array, return null.\nFor example, given the array[13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array).\nYou can assume all the integers in the array are unique.";
 		public const string PROBLEM059_DESCRIPTION = "Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?";
 		public const string PROBLEM060_DESCRIPTION = "Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.\nFor example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return true, since we can split it up into {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.\nGiven the multiset {15, 5, 20, 10, 35}, it would return false, since we can't split it up into two subsets that add up to the same sum.";
-
+		public const string PROBLEM061_DESCRIPTION = "Implement integer exponentiation. That is, implement the pow(x, y) function, where x and y are integers and returns x^y.\nDo this faster than the naive method of repeated multiplication.\nFor example, pow(2, 10) should return 1024.";
 	}
 }

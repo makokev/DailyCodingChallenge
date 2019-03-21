@@ -11,7 +11,7 @@ I'm trying to be constant but it's not easy. Some days I don't have found enough
 Also the second month is gone. I have discovered a lot of new problems or I have reviews old problems but with a different prospective point of view. This challenge is very interesting. 
 
 
-#### Pending problems (for now : [ ):
+#### Pending problems (for now!!!):
 23, 55 and 59.
 
 ### Source and greatings

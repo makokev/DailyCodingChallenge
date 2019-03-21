@@ -22,6 +22,7 @@ public abstract class Problem
 		var types = from assembly in AppDomain.CurrentDomain.GetAssemblies()
 					from type in assembly.GetTypes()
 					where type.IsSubclassOf(typeof(Problem)) && !type.IsAbstract
+					orderby type.ToString()
 					select type;
 		foreach (Type t in types)
 		{

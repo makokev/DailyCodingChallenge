@@ -69,5 +69,6 @@ namespace DailyCodingChallenge.Problems
 		public const string PROBLEM063_DESCRIPTION = "Given a 2D matrix of characters and a target word, write a function that returns whether the word can be found in the matrix by going left-to-right, or up-to-down.\n\nFor example, given the following matrix:\n[['F', 'A', 'C', 'I'],\n ['O', 'B', 'Q', 'P'],\n ['A', 'N', 'O', 'B'],\n ['M', 'A', 'S', 'S']]\nand the target word 'FOAM', you should return true, since it's the leftmost column. Similarly, given the target word 'MASS', you should return true, since it's the last row.";
 		public const string PROBLEM064_DESCRIPTION = "A knight's tour is a sequence of moves by a knight on a chessboard such that all squares are visited once.\nGiven N, write a function to return the number of knight's tours on an N by N chessboard.";
 		public const string PROBLEM065_DESCRIPTION = "Given a N by M matrix of numbers, print out the matrix in a clockwise spiral.\nFor example, given the following matrix:\n[[1,  2,  3,  4,  5],\n [6,  7,  8,  9,  10],\n [11, 12, 13, 14, 15],\n [16, 17, 18, 19, 20]]";
+		public const string PROBLEM066_DESCRIPTION = "Assume you have access to a function toss_biased() which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.\nWrite a function to simulate an unbiased coin toss.";
 	}
 }

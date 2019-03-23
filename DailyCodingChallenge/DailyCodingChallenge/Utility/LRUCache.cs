@@ -1,12 +1,9 @@
-﻿using DailyCodingChallenge.Problems.Utility;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DailyCodingChallenge.Utility
 {
+	// Last Recently Used
 	internal class LRUCache<KeyType,ValueType>
 	{
 		private readonly Dictionary<KeyType, ValueType> _cacheDictionary;

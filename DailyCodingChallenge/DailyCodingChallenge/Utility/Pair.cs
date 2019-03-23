@@ -17,7 +17,7 @@ namespace DailyCodingChallenge.Problems.Utility
 			Second = second;
 		}
 
-		public override string ToString() =>  "(" + First + ", " + Second + ")";
+		public override string ToString() =>  "<" + First + ", " + Second + ">";
 
 		public static Pair<T, W> Cons(T first, W second) => new Pair<T, W>(first, second);
 

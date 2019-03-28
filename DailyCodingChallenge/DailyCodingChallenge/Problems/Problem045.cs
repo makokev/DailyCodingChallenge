@@ -30,9 +30,7 @@ namespace DailyCodingChallenge.Problems
 			return r % 7 + 1;
 		}
 		
-		private int Rand5()
-		{
-			return _random.Next(5) + 1;
-		}
+		private int Rand5() => _random.Next(1,6);
+
 	}
 }

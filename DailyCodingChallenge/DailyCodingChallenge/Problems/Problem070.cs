@@ -38,14 +38,8 @@ namespace DailyCodingChallenge.Problems
 			return counter - 1;
 		}
 
-		private bool IsPerfect(int counter)
-		{
-			int sum = 0;
-			foreach(char digit in counter.ToString())
-			{
-				sum += int.Parse(""+digit);
-			}
-			return sum == 10;
-		}
+		private bool IsPerfect(int number) 
+			=> number.ToString().Sum(digit => int.Parse(digit.ToString())) == 10;
+		
 	}
 }
